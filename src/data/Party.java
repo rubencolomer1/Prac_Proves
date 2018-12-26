@@ -3,8 +3,11 @@ package data;
 public class Party
 {
     private final String name;
-    public Party(String name)
+    public Party(String name) throws NullNameException
     {
+        if (name == null) {
+            throw new NullNameException("Party name cannot be null!");
+        }
         this.name = name;
     }
     public String getName()
