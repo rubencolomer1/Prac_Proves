@@ -26,4 +26,9 @@ final public class DigitalSignature
         DigitalSignature sign = (DigitalSignature) o;
         return Arrays.equals(digitalSignature, sign.digitalSignature);
     }
+    @Override
+    public int hashCode()
+    {
+        return Arrays.hashCode(digitalSignature);
+    }
 }
