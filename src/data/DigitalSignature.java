@@ -9,7 +9,6 @@ final public class DigitalSignature
     {
         this.digitalSignature = digitalSignature;
     }
-
     public byte[] getDigitalSignature()
     {
         return digitalSignature;
@@ -18,5 +17,13 @@ final public class DigitalSignature
     public String toString()
     {
         return "DigitalSignature{" + "digitalSignature ='" + Arrays.toString(digitalSignature) + '\'' + '}';
+    }
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DigitalSignature sign = (DigitalSignature) o;
+        return Arrays.equals(digitalSignature, sign.digitalSignature);
     }
 }
