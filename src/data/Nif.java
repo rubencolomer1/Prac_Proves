@@ -2,15 +2,34 @@ package data;
 
 public class Nif
 {
-    private final String num;
-    public Nif(num)
+    private final String nif;
+    public Nif(String nif)
     {
-        this.num = num;
+        this.nif = nif;
+    }
+    public String getNif()
+    {
+        return nif;
     }
 
-    public String getNum()
+    @Override
+    public boolean equals(Object o)
     {
-        return num;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Nif dni = (Nif) o;
+        return nif.equals(dni.nif);
+    }
+    @Override
+    public int hashCode()
+    {
+        return nif.hashCode();
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Nif{" + "nif='" + nif + '\'' + '}';
     }
 }
 
