@@ -14,4 +14,9 @@ final public class DigitalSignature
     {
         return digitalSignature;
     }
+    @Override
+    public String toString()
+    {
+        return "DigitalSignature{" + "digitalSignature ='" + Arrays.toString(digitalSignature) + '\'' + '}';
+    }
 }
