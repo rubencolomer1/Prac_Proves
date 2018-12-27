@@ -4,9 +4,13 @@ final public class MailAdress
 {
     private final String mail;
 
-    public MailAdress(String mail)
+    public MailAdress(String mail) throws NullException
     {
         this.mail = mail;
+        if (mail == null)
+        {
+            throw new NullException("Mail adress cannot be null!");
+        }
     }
     public String getMailAdress()
     {

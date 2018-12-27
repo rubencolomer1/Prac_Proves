@@ -5,10 +5,11 @@ public class Party
     private final String name;
     public Party(String name) throws NullException
     {
-        if (name == null) {
+        this.name = name;
+        if (name == null)
+        {
             throw new NullException("Party name cannot be null!");
         }
-        this.name = name;
     }
     public String getName()
     {

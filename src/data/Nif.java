@@ -3,9 +3,13 @@ package data;
 public class Nif
 {
     private final String nif;
-    public Nif(String nif)
+    public Nif(String nif) throws NullException
     {
         this.nif = nif;
+        if (nif == null)
+        {
+            throw new NullException("NIF cannot be null!");
+        }
     }
     public String getNif()
     {

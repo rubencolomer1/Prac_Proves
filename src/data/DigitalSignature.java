@@ -5,9 +5,13 @@ final public class DigitalSignature
 {
     private final byte[] digitalSignature;
 
-    public DigitalSignature(byte[] digitalSignature)
+    public DigitalSignature(byte[] digitalSignature) throws NullException
     {
         this.digitalSignature = digitalSignature;
+        if (digitalSignature == null)
+        {
+            throw new NullException("digitalSignature cannot be null!");
+        }
     }
     public byte[] getDigitalSignature()
     {
