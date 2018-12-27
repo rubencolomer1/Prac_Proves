@@ -1,6 +1,11 @@
 package data;
+import java.util.Arrays;
 
-public class DigitalSignature
+final public class DigitalSignature
 {
-
+    private final byte[] digitalSignature;
+    public DigitalSignature(byte[] digitalSignature)
+    {
+        this.digitalSignature = digitalSignature;
+    }
 }
