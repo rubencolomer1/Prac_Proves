@@ -1,5 +1,7 @@
 package data;
 
+import Exceptions.NullException;
+
 final public class MailAdress
 {
     private final String mail;

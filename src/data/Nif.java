@@ -1,5 +1,7 @@
 package data;
 
+import Exceptions.NullException;
+
 public class Nif
 {
     private final String nif;

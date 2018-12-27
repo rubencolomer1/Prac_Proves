@@ -1,4 +1,4 @@
-package data;
+package Exceptions;
 
 public class NullException extends Exception
 {

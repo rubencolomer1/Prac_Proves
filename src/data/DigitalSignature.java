@@ -1,4 +1,6 @@
 package data;
+import Exceptions.NullException;
+
 import java.util.Arrays;
 
 final public class DigitalSignature
