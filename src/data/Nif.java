@@ -1,11 +1,12 @@
 package data;
 
 import Exceptions.NullException;
+import Exceptions.NifDoesNotExistsException;
 
 public class Nif
 {
     private final String nif;
-    public Nif(String nif) throws NullException
+    public Nif(String nif) throws NifDoesNotExistsException,NullException
     {
         this.nif = nif;
         if (nif == null)
@@ -36,6 +37,13 @@ public class Nif
     public String toString()
     {
         return "Nif{" + "nif='" + nif + '\'' + '}';
+    }
+
+    public boolean isValidNif(String nif) {
+        String nifPattern = "(\\d{1,8})([TRWAGMYFPDXBNJZSQVHLCKEtrwagmyfpdxbnjzsqvhlcke])";
+        java.util.regex.Pattern p = java.util.regex.Pattern.compile(nifPattern);
+        java.util.regex.Matcher m = p.matcher(nif);
+        return m.matches();
     }
 }
 
