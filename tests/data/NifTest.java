@@ -1,6 +1,5 @@
 package data;
 
-import Exceptions.EmailDoesNotExistsException;
 import Exceptions.NullException;
 import Exceptions.NifDoesNotExistsException;
 import org.junit.jupiter.api.Test;
