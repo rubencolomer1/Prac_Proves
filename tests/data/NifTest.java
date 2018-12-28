@@ -52,9 +52,7 @@ class NifTest {
         Nif nifCorrect1 = null;
         Nif nifCorrect2 = null;
         Nif nifCorrect3 = null;
-        Nif emailIncorrect1 = null;
-        Nif emailIncorrect2 = null;
-        Nif emailIncorrect3 = null;
+
         try {
             nifCorrect1 = new Nif("73210173T");
             nifCorrect2 = new Nif("48057957D");

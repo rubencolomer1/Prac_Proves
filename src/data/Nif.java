@@ -7,7 +7,7 @@ import Exceptions.NifDoesNotExistsException;
 public class Nif
 {
     private final String nif;
-    public Nif(String nif) throws NifDoesNotExistsException,NullException
+    public Nif(String nif) throws NifDoesNotExistsException, NullException
     {
         this.nif = nif;
         if (nif == null)
