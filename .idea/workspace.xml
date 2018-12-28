@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ac53409-38cb-4429-a546-fcb3fd494eb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/data/MailAdressTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/DigitalSignatureTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Prac_Proves/data/NifTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Prac_Proves/data/NifTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Prac_Proves/data/PartyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Prac_Proves/data/PartyTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/MailAdress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/MailAdress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/NifTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/NifTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/PartyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/PartyTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,17 +82,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/MailAdress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="221">
+              <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="34" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/data/MailAdressTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="1">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#492#493#0" expanded="true" />
                 <element signature="e#548#549#0" expanded="true" />
@@ -113,12 +108,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/DigitalSignature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+            <state relative-caret-position="340">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#467#468#0" expanded="true" />
                 <element signature="e#506#507#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/data/DigitalSignatureTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="681">
+              <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+              <folding>
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+                <element signature="e#855#856#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,6 +161,7 @@
         <option value="$PROJECT_DIR$/tests/data/NifTest.java" />
         <option value="$PROJECT_DIR$/tests/data/MailAdressTest.java" />
         <option value="$PROJECT_DIR$/src/data/MailAdress.java" />
+        <option value="$PROJECT_DIR$/tests/data/DigitalSignatureTest.java" />
       </list>
     </option>
   </component>
@@ -204,7 +217,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546018821599" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546023051378" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -238,7 +251,53 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MailAdressTest">
+  <component name="RunManager" selected="JUnit.DigitalSignatureTest">
+    <configuration name="DigitalSignatureTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Prac_Proves" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="data" />
+      <option name="MAIN_CLASS_NAME" value="data.DigitalSignatureTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DigitalSignatureTest.TestGetDigitalSignature" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Prac_Proves" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="data" />
+      <option name="MAIN_CLASS_NAME" value="data.DigitalSignatureTest" />
+      <option name="METHOD_NAME" value="TestGetDigitalSignature" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DigitalSignatureTest.TestToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Prac_Proves" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="data" />
+      <option name="MAIN_CLASS_NAME" value="data.DigitalSignatureTest" />
+      <option name="METHOD_NAME" value="TestToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MailAdressTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Prac_Proves" />
       <extension name="coverage">
@@ -267,42 +326,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PartyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Prac_Proves" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="data.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="data" />
-      <option name="MAIN_CLASS_NAME" value="data.PartyTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PartyTest.getName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Prac_Proves" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="data.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="data" />
-      <option name="MAIN_CLASS_NAME" value="data.PartyTest" />
-      <option name="METHOD_NAME" value="getName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DigitalSignatureTest" />
+        <item itemvalue="JUnit.DigitalSignatureTest.TestToString" />
+        <item itemvalue="JUnit.DigitalSignatureTest.TestGetDigitalSignature" />
         <item itemvalue="JUnit.MailAdressTest" />
         <item itemvalue="JUnit.NifTest" />
-        <item itemvalue="JUnit.PartyTest" />
-        <item itemvalue="JUnit.PartyTest.getName" />
       </list>
     </recent_temporary>
   </component>
@@ -320,29 +350,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PartyTest - 2018.12.28 at 17h 58m 24s.xml">
-      <configuration name="PartyTest" configurationId="JUnit" />
+    <history-entry file="DigitalSignatureTest_TestGetDigitalSignature - 2018.12.28 at 18h 55m 51s.xml">
+      <configuration name="DigitalSignatureTest.TestGetDigitalSignature" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PartyTest_getName - 2018.12.28 at 17h 58m 50s.xml">
-      <configuration name="PartyTest.getName" configurationId="JUnit" />
+    <history-entry file="DigitalSignatureTest_TestGetDigitalSignature - 2018.12.28 at 18h 56m 59s.xml">
+      <configuration name="DigitalSignatureTest.TestGetDigitalSignature" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PartyTest - 2018.12.28 at 18h 11m 58s.xml">
-      <configuration name="PartyTest" configurationId="JUnit" />
+    <history-entry file="DigitalSignatureTest_TestToString - 2018.12.28 at 18h 59m 06s.xml">
+      <configuration name="DigitalSignatureTest.TestToString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NifTest - 2018.12.28 at 18h 27m 41s.xml">
-      <configuration name="NifTest" configurationId="JUnit" />
+    <history-entry file="DigitalSignatureTest_TestToString - 2018.12.28 at 19h 00m 32s.xml">
+      <configuration name="DigitalSignatureTest.TestToString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NifTest - 2018.12.28 at 18h 34m 24s.xml">
-      <configuration name="NifTest" configurationId="JUnit" />
+    <history-entry file="DigitalSignatureTest_TestToString - 2018.12.28 at 19h 01m 30s.xml">
+      <configuration name="DigitalSignatureTest.TestToString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MailAdressTest - 2018.12.28 at 18h 35m 52s.xml">
-      <configuration name="MailAdressTest" configurationId="JUnit" />
+    <history-entry file="DigitalSignatureTest_TestGetDigitalSignature - 2018.12.28 at 19h 02m 07s.xml">
+      <configuration name="DigitalSignatureTest.TestGetDigitalSignature" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MailAdressTest - 2018.12.28 at 18h 38m 53s.xml">
-      <configuration name="MailAdressTest" configurationId="JUnit" />
+    <history-entry file="DigitalSignatureTest_TestGetDigitalSignature - 2018.12.28 at 19h 47m 20s.xml">
+      <configuration name="DigitalSignatureTest.TestGetDigitalSignature" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MailAdressTest - 2018.12.28 at 18h 40m 24s.xml">
-      <configuration name="MailAdressTest" configurationId="JUnit" />
+    <history-entry file="DigitalSignatureTest_TestToString - 2018.12.28 at 19h 47m 33s.xml">
+      <configuration name="DigitalSignatureTest.TestToString" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DigitalSignatureTest_TestToString - 2018.12.28 at 19h 49m 29s.xml">
+      <configuration name="DigitalSignatureTest.TestToString" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DigitalSignatureTest - 2018.12.28 at 19h 50m 54s.xml">
+      <configuration name="DigitalSignatureTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -356,17 +392,17 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3286119" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3286119" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -391,18 +427,6 @@
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
-    <entry file="file://$PROJECT_DIR$/src/data/DigitalSignature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Exceptions/NullException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -447,13 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/MailAdress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/Nif.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
@@ -465,10 +482,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/MailAdress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="34" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/DigitalSignature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/data/MailAdressTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="1">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#492#493#0" expanded="true" />
             <element signature="e#548#549#0" expanded="true" />
@@ -476,6 +512,21 @@
             <element signature="e#814#815#0" expanded="true" />
             <element signature="e#858#859#0" expanded="true" />
             <element signature="e#918#919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/data/DigitalSignatureTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding>
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
           </folding>
         </state>
       </provider>
