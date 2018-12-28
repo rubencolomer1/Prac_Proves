@@ -1,17 +1,17 @@
 package data;
 
-import Exceptions.NullException;
+import Exceptions.EmailDoesNotExistsException;
 
 final public class MailAdress
 {
     private final String mail;
 
-    public MailAdress(String mail) throws NullException
+    public MailAdress(String mail) throws EmailDoesNotExistsException
     {
         this.mail = mail;
-        if (mail == null)
+        if (!isValidEmailAddress(mail))
         {
-            throw new NullException("Mail adress cannot be null!");
+            throw new EmailDoesNotExistsException("That mail adress doesn't exists!");
         }
     }
 
@@ -40,4 +40,13 @@ final public class MailAdress
     {
         return mail.hashCode();
     }
+
+    public boolean isValidEmailAddress(String email) {
+        String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+        java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
+        java.util.regex.Matcher m = p.matcher(email);
+        return m.matches();
+    }
 }
+
+
