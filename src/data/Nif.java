@@ -1,5 +1,6 @@
 package data;
 
+import Exceptions.EmailDoesNotExistsException;
 import Exceptions.NullException;
 import Exceptions.NifDoesNotExistsException;
 
@@ -12,6 +13,10 @@ public class Nif
         if (nif == null)
         {
             throw new NullException("NIF cannot be null!");
+        }
+        if (!isValidNif(nif))
+        {
+            throw new NifDoesNotExistsException("That NIF doesn't exists!");
         }
     }
     public String getNif()
