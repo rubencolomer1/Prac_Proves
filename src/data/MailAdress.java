@@ -1,14 +1,20 @@
 package data;
 
 import Exceptions.EmailDoesNotExistsException;
+import Exceptions.NullException;
 
 final public class MailAdress
 {
     private final String mail;
 
-    public MailAdress(String mail) throws EmailDoesNotExistsException
+    public MailAdress(String mail) throws EmailDoesNotExistsException, NullException
     {
         this.mail = mail;
+        if (mail == null)
+        {
+            throw new NullException("Email cannot be NULL!");
+        }
+
         if (!isValidEmailAddress(mail))
         {
             throw new EmailDoesNotExistsException("That mail adress doesn't exists!");
