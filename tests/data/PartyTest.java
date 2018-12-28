@@ -7,39 +7,39 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PartyTest
 {
-    private Party prova1, prova2;
+    private Party partit1, partit2;
     {
         try
         {
-            prova1 = new Party("hola");
-            prova2 = new Party("hola");
+            partit1 = new Party("hola");
+            partit2 = new Party("hola");
         } catch (NullException e) {
             e.printStackTrace();
         }
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void TestgetName()
     {
-        assertEquals("hola", prova1.getName());
+        assertEquals("hola", partit1.getName());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void TesttoString()
     {
-        String stringProva1 = "Party{name='hola'}";
-        assertEquals(stringProva1,prova1.toString());
+        String stringPartit1 = "Party{name='hola'}";
+        assertEquals(stringPartit1,partit1.toString());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void TestEquals()
     {
-        assertTrue(prova1.equals(prova2));
+        assertTrue(partit1.equals(partit2));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void TestHashCode(){
-        assertTrue(prova1.hashCode()==prova2.hashCode());
+        assertTrue(partit1.hashCode()==partit2.hashCode());
     }
 
 }
