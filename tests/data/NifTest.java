@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class NifTest {
-    Nif nif1, nif2;
+    private Nif nif1, nif2;
 
     {
         try {
@@ -40,6 +40,6 @@ class NifTest {
     void testToString()
     {
         String stringNif1 = "Nif{nif='48057957D'}";
-        assertEquals(stringNif1,stringNif1.toString());
+        assertEquals(stringNif1,nif1.toString());
     }
 }

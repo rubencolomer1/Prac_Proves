@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ac53409-38cb-4429-a546-fcb3fd494eb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/data/NifTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/MailAdressTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Prac_Proves/data/NifTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Prac_Proves/data/NifTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Prac_Proves/data/PartyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Prac_Proves/data/PartyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/MailAdress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/MailAdress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/NifTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/NifTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/data/PartyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/PartyTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/Party.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="51">
               <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
             </state>
           </provider>
@@ -28,12 +31,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/data/PartyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="44" />
+            <state relative-caret-position="-102">
+              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#484#485#0" expanded="true" />
-                <element signature="e#744#745#0" expanded="true" />
+                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
                 <element signature="e#865#866#0" expanded="true" />
                 <element signature="e#928#929#0" expanded="true" />
               </folding>
@@ -53,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/Nif.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
+            <state relative-caret-position="-136">
               <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
               <folding>
                 <element signature="e#619#620#0" expanded="true" />
@@ -63,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/data/NifTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            <state relative-caret-position="273">
+              <caret line="35" column="53" lean-forward="true" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
               <folding>
                 <element signature="e#397#398#0" expanded="true" />
                 <element signature="e#452#453#0" expanded="true" />
@@ -83,8 +87,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/MailAdress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+            <state relative-caret-position="392">
+              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/data/MailAdressTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+              <folding>
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#769#770#0" expanded="true" />
+                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#858#859#0" expanded="true" />
+                <element signature="e#918#919#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,10 +144,11 @@
         <option value="$PROJECT_DIR$/src/data/NullNameException.java" />
         <option value="$PROJECT_DIR$/src/data/Party.java" />
         <option value="$PROJECT_DIR$/src/data/DigitalSignature.java" />
-        <option value="$PROJECT_DIR$/src/data/MailAdress.java" />
         <option value="$PROJECT_DIR$/src/data/Nif.java" />
         <option value="$PROJECT_DIR$/tests/data/PartyTest.java" />
         <option value="$PROJECT_DIR$/tests/data/NifTest.java" />
+        <option value="$PROJECT_DIR$/tests/data/MailAdressTest.java" />
+        <option value="$PROJECT_DIR$/src/data/MailAdress.java" />
       </list>
     </option>
   </component>
@@ -182,7 +204,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546018070478" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546018821599" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -216,7 +238,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.NifTest">
+  <component name="RunManager" selected="JUnit.MailAdressTest">
+    <configuration name="MailAdressTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Prac_Proves" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="data" />
+      <option name="MAIN_CLASS_NAME" value="data.MailAdressTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NifTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Prac_Proves" />
       <extension name="coverage">
@@ -263,6 +299,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MailAdressTest" />
         <item itemvalue="JUnit.NifTest" />
         <item itemvalue="JUnit.PartyTest" />
         <item itemvalue="JUnit.PartyTest.getName" />
@@ -295,6 +332,18 @@
     <history-entry file="NifTest - 2018.12.28 at 18h 27m 41s.xml">
       <configuration name="NifTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="NifTest - 2018.12.28 at 18h 34m 24s.xml">
+      <configuration name="NifTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailAdressTest - 2018.12.28 at 18h 35m 52s.xml">
+      <configuration name="MailAdressTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailAdressTest - 2018.12.28 at 18h 38m 53s.xml">
+      <configuration name="MailAdressTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailAdressTest - 2018.12.28 at 18h 40m 24s.xml">
+      <configuration name="MailAdressTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -307,7 +356,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Messages" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
@@ -342,13 +391,6 @@
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
-    <entry file="file://$PROJECT_DIR$/src/data/MailAdress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/DigitalSignature.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -361,13 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/Party.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Exceptions/NullException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -375,23 +410,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/data/NifTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="35" column="53" lean-forward="true" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
+          <folding>
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/data/PartyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="44" />
+        <state relative-caret-position="-102">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
             <element signature="e#865#866#0" expanded="true" />
             <element signature="e#928#929#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/Party.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/MailAdress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/Nif.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
+        <state relative-caret-position="-136">
           <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           <folding>
             <element signature="e#619#620#0" expanded="true" />
@@ -400,17 +465,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/data/NifTest.java">
+    <entry file="file://$PROJECT_DIR$/tests/data/MailAdressTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="205">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
             <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
           </folding>
         </state>
       </provider>

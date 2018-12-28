@@ -14,23 +14,27 @@ final public class MailAdress
             throw new NullException("Mail adress cannot be null!");
         }
     }
+
     public String getMailAdress()
     {
         return mail;
     }
+
     @Override
     public String toString()
     {
-        return "MailAdress{" + "mail ='" + mail + '\'' + '}';
+        return "MailAdress{" + "mail='" + mail + '\'' + '}';
     }
+
     @Override
     public boolean equals(Object o)
     {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MailAdress mailAdress = (MailAdress) o;
-        return mailAdress.equals(mail);
+        return mail.equals(mailAdress.mail);
     }
+
     @Override
     public int hashCode()
     {

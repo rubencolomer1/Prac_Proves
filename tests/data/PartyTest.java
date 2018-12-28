@@ -25,16 +25,16 @@ class PartyTest
     }
 
     @Test
+    public void TestEquals()
+    {
+        assertTrue(partit1.equals(partit2));
+    }
+
+    @Test
     public void TesttoString()
     {
         String stringPartit1 = "Party{name='hola'}";
         assertEquals(stringPartit1,partit1.toString());
-    }
-
-    @Test
-    public void TestEquals()
-    {
-        assertTrue(partit1.equals(partit2));
     }
 
     @Test
