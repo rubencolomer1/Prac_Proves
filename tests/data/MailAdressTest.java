@@ -53,9 +53,7 @@ class MailAdressTest {
         MailAdress emailCorrect1 = null;
         MailAdress emailCorrect2 = null;
         MailAdress emailCorrect3 = null;;
-        MailAdress emailIncorrect1 = null;;
-        MailAdress emailIncorrect2 = null;;
-        MailAdress emailIncorrect3 = null;;
+
         try {
             emailCorrect1 = new MailAdress("me@gmail.com");
             emailCorrect2 = new MailAdress("me@1.com");
