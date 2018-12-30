@@ -2,7 +2,7 @@ package data;
 
 import Exceptions.NullException;
 
-public class Party
+public class Party extends Counter
 {
     private final String name;
     public Party(String name) throws NullException

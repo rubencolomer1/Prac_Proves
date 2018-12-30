@@ -1,6 +1,5 @@
 package kiosk;
 
-import Exceptions.NullException;
 import data.Party;
 import java.util.Set;
 
@@ -23,7 +22,7 @@ public class VoteCounter {
 
     public void countParty(Party party)
     {
-        this.votes = getVotesFor(party) + 1;
+        getValidParty(party).addVote();
         this.total = getTotal() + 1;
     }
 
@@ -56,7 +55,10 @@ public class VoteCounter {
     }
 
     public int getVotesFor(Party party) {
-      return votes;
+        Party p = getValidParty(party);
+        if(p != null)
+            return p.getVotes();
+        return 0;
     }
 
     public int getNulls() {
@@ -69,5 +71,14 @@ public class VoteCounter {
 
     public int getTotal() {
      return total;
+    }
+
+    private Party getValidParty(Party party) {
+        for(Party p : validParties) {
+            if(p.equals(party)) {
+                return p;
+            }
+        }
+        return null;
     }
 }
