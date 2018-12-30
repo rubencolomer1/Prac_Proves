@@ -25,6 +25,7 @@ public class Party extends Counter
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Party party1 = (Party) o;
+        System.out.println("IE");
         return name.equals(party1.name);
     }
 
