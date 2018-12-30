@@ -51,9 +51,7 @@ public class VoteCounter {
             throw new NullPartyException("Null Party!");
         }
 
-
-
-        if (validParties.contains(party.getName()))
+        if (validParties.contains(party))
         {
             countParty(party);
         }
