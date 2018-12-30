@@ -23,17 +23,20 @@ public class VoteCounter {
 
     public void countParty(Party party)
     {
-        this.votes += 1;
+        this.votes = getVotesFor(party) + 1;
+        this.total = getTotal() + 1;
     }
 
     public void countNull()
     {
-        this.nulls += 1;
+        this.nulls = getNulls() + 1;
+        this.total = getTotal() + 1;
     }
 
     public void countBlank()
     {
-        this.blanks += 1;
+        this.blanks = getBlanks() + 1;
+        this.total = getTotal() + 1;
     }
 
     public void scrutinize(Party party)
