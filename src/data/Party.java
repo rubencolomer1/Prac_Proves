@@ -13,6 +13,7 @@ public class Party
             throw new NullException("Party name cannot be null!");
         }
     }
+
     public String getName()
     {
         return name;
