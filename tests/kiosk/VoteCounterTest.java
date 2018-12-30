@@ -75,14 +75,37 @@ class VoteCounterTest
     }
 
     @Test
-    void testGetNulls() {
+    void testGetNulls() throws NullPartyException {
+        v1.countNull();
+        v1.countNull();
+        v1.countBlank();
+        v1.scrutinize(partit1);
+        assertTrue(v1.getNulls() == 2);
+        v1.countNull();
+        v1.scrutinize(partit3);
+        assertTrue(v1.getNulls() == 4);
+
     }
 
     @Test
-    void testGetBlanks() {
+    void testGetBlanks()
+    {
+        v1.countBlank();
+        v1.countBlank();
+        assertTrue(v1.getBlanks() == 2);
+        v1.countNull();
+        v1.countBlank();
+        assertTrue(v1.getBlanks() == 3);
     }
 
     @Test
-    void testGetTotal() {
+    void testGetTotal() throws NullPartyException {
+        v1.countNull();
+        v1.countNull();
+        v1.countBlank();
+        v1.scrutinize(partit1);
+        assertTrue(v1.getTotal() == 4);
+        v1.countNull();
+        assertTrue(v1.getTotal() == 5);
     }
 }

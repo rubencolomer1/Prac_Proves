@@ -63,9 +63,7 @@ public class VoteCounter {
         }
         else
         {
-            System.out.print("||" + party.getName() + "||");
-            System.out.print(String.join(", ", Arrays.toString(validParties.toArray())));
-            System.out.println("");
+
             countNull();
         }
     }

@@ -22,7 +22,6 @@ public class Party extends Counter
     @Override
     public boolean equals(Object o)
     {
-        System.out.println("IE");
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Party party1 = (Party) o;

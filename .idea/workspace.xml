@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5e2f1a72-4a26-4fd9-a06a-a5a389592fef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kiosk/VotingKiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk/VotingKiosk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/ElectoralOrganism.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ElectoralOrganism.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/MailerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MailerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Prac_Proves/kiosk/VoteCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Prac_Proves/kiosk/VoteCounter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Prac_Proves/kiosk/VoteCounterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Prac_Proves/kiosk/VoteCounterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kiosk/VoteCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk/VoteCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/kiosk/VoteCounterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/kiosk/VoteCounterTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,21 +17,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/kiosk/VoteCounterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/Party.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-169">
-              <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+            <state relative-caret-position="148">
+              <caret line="83" column="23" lean-forward="true" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -37,8 +33,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kiosk/VoteCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="1054">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/Party.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/Nif.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Exceptions/NullPartyException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -55,6 +84,9 @@
         <option value="$PROJECT_DIR$/src/kiosk/VotingKiosk.java" />
         <option value="$PROJECT_DIR$/src/services/ElectoralOrganism.java" />
         <option value="$PROJECT_DIR$/src/services/MailerService.java" />
+        <option value="$PROJECT_DIR$/src/data/Party.java" />
+        <option value="$PROJECT_DIR$/src/kiosk/VoteCounter.java" />
+        <option value="$PROJECT_DIR$/tests/kiosk/VoteCounterTest.java" />
       </list>
     </option>
   </component>
@@ -70,7 +102,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -93,6 +124,12 @@
               <item name="Prac_Proves" type="b2602c69:ProjectViewProjectNode" />
               <item name="Prac_Proves" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Prac_Proves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Prac_Proves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="kiosk" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -110,10 +147,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546201032337" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546204470257" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunDashboard">
@@ -128,8 +166,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VoteCounterTest.testScrutinize">
-    <configuration name="VoteCounterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Android JUnit.VoteCounterTest.testGetNulls">
+    <configuration name="VoteCounterTest.testGetNulls" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
       <module name="Prac_Proves" />
       <extension name="coverage">
         <pattern>
@@ -139,11 +177,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="kiosk" />
       <option name="MAIN_CLASS_NAME" value="kiosk.VoteCounterTest" />
+      <option name="METHOD_NAME" value="testGetNulls" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VoteCounterTest.testScrutinize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VoteCounterTest.testCountBlank" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Prac_Proves" />
       <extension name="coverage">
         <pattern>
@@ -153,7 +193,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="kiosk" />
       <option name="MAIN_CLASS_NAME" value="kiosk.VoteCounterTest" />
-      <option name="METHOD_NAME" value="testScrutinize" />
+      <option name="METHOD_NAME" value="testCountBlank" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VoteCounterTest.testGetBlanks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Prac_Proves" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kiosk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kiosk" />
+      <option name="MAIN_CLASS_NAME" value="kiosk.VoteCounterTest" />
+      <option name="METHOD_NAME" value="testGetBlanks" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VoteCounterTest.testGetNulls" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Prac_Proves" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kiosk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kiosk" />
+      <option name="MAIN_CLASS_NAME" value="kiosk.VoteCounterTest" />
+      <option name="METHOD_NAME" value="testGetNulls" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VoteCounterTest.testGetTotal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Prac_Proves" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kiosk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kiosk" />
+      <option name="MAIN_CLASS_NAME" value="kiosk.VoteCounterTest" />
+      <option name="METHOD_NAME" value="testGetTotal" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,8 +249,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VoteCounterTest.testScrutinize" />
-        <item itemvalue="JUnit.VoteCounterTest" />
+        <item itemvalue="Android JUnit.VoteCounterTest.testGetNulls" />
+        <item itemvalue="JUnit.VoteCounterTest.testGetNulls" />
+        <item itemvalue="JUnit.VoteCounterTest.testGetBlanks" />
+        <item itemvalue="JUnit.VoteCounterTest.testGetTotal" />
+        <item itemvalue="JUnit.VoteCounterTest.testCountBlank" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +270,32 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="VoteCounterTest - 2018.12.30 at 22h 04m 53s.xml">
+      <configuration name="VoteCounterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoteCounterTest_testScrutinize - 2018.12.30 at 22h 05m 28s.xml">
+      <configuration name="VoteCounterTest.testScrutinize" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoteCounterTest_testCountBlank - 2018.12.30 at 22h 08m 50s.xml">
+      <configuration name="VoteCounterTest.testCountBlank" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoteCounterTest_testCountBlank - 2018.12.30 at 22h 09m 03s.xml">
+      <configuration name="VoteCounterTest.testCountBlank" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoteCounterTest_testCountBlank - 2018.12.30 at 22h 09m 15s.xml">
+      <configuration name="VoteCounterTest.testCountBlank" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoteCounterTest_testGetTotal - 2018.12.30 at 22h 10m 54s.xml">
+      <configuration name="VoteCounterTest.testGetTotal" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoteCounterTest_testGetBlanks - 2018.12.30 at 22h 11m 51s.xml">
+      <configuration name="VoteCounterTest.testGetBlanks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoteCounterTest_testGetNulls - 2018.12.30 at 22h 14m 31s.xml">
+      <configuration name="VoteCounterTest.testGetNulls" configurationId="AndroidJUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
@@ -188,15 +305,15 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24966443" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -212,16 +329,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/data/Nif.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/MailerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -252,24 +359,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kiosk/VoteCounter.java">
+    <entry file="file://$PROJECT_DIR$/src/data/Nif.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exceptions/NullPartyException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
+          <folding>
+            <element signature="e#5877#5878#0" expanded="true" />
+            <element signature="e#5913#5914#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/Party.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        <state relative-caret-position="187">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kiosk/VoteCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/kiosk/VoteCounterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state relative-caret-position="148">
+          <caret line="83" column="23" lean-forward="true" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
