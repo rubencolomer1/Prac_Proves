@@ -1,20 +1,43 @@
 package kiosk;
-import data.Party;
-import data.MailAdress;
-import  services.ElectoralOrganism;
-import services.MailerService;
 
-//???
+import data.*;
+import  services.*;
 
-public abstract class VotingKiosk implements ElectoralOrganism, MailerService {
-    public VotingKiosk(){}
 
-    public void setElectoralOrganism(ElectoralOrganism eO){}
+public abstract class VotingKiosk
+{
+    private VoteCounter v1;
+    private String nif;
+    private boolean potVotar;
 
-    public void setMailerService(MailerService mService){}
 
-    public void vote(Party party){}
+    private MailerService mService;
+    private ElectoralOrganism eO;
 
-    public void sendeReceipt(MailAdress address){}
+
+    public VotingKiosk()
+    {
+
+    }
+
+    public void setElectoralOrganism(ElectoralOrganism eO)
+    {
+        this.eO = eO;
+    }
+
+    public void setMailerService(MailerService mService)
+    {
+        this.mService = mService;
+    }
+
+    public void vote(Party party)
+    {
+
+    }
+
+    public void sendeReceipt(MailAdress address)
+    {
+
+    }
 
 }
