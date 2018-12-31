@@ -9,6 +9,8 @@ public abstract class VotingKiosk
     private VoteCounter v1;
     private String nif;
     private boolean potVotar;
+    private boolean volRebut;
+    private Party opcioVot;
 
 
     private MailerService mService;
