@@ -16,23 +16,25 @@ public  class VotingKiosk
     private MailerService mService;
     private ElectoralOrganism eO;
 
-    private boolean eOServiceActivated;
-    private boolean mServiceActivated;
+    private boolean eOServiceSet;
+    private boolean mServiceSet;
+    private boolean nifSet;
 
 
 
     public VotingKiosk()
     {
-        this.eOServiceActivated = false;
-        this.mServiceActivated = false;
+        this.eOServiceSet = false;
+        this.mServiceSet = false;
+        this.nifSet = false;
     }
 
     public void setElectoralOrganism(ElectoralOrganism eO)
     {
-        if (!eOServiceActivated)
+        if (!eOServiceSet)
         {
             this.eO = eO;
-            eOServiceActivated = true;
+            eOServiceSet = true;
         }
         else
         {
@@ -43,10 +45,10 @@ public  class VotingKiosk
 
     public void setMailerService(MailerService mService)
     {
-        if (!mServiceActivated)
+        if (!mServiceSet)
         {
             this.mService = mService;
-            mServiceActivated = true;
+            mServiceSet = true;
         }
         else
         {
@@ -56,12 +58,21 @@ public  class VotingKiosk
     }
     public void SetNif(Nif nif)
     {
-        this.nif = nif;
+        if (!nifSet)
+        {
+            this.nif = nif;
+            nifSet = true;
+        }
+        else
+        {
+            throw new IllegalStateException();
+        }
+
     }
 
     public void vote(Party party) throws NullPartyException
     {
-        if (!eO.canVote(nif) || !eOServiceActivated || !mServiceActivated)
+        if (!eO.canVote(nif) || !eOServiceSet || !mServiceSet)
         {
             throw new IllegalStateException();
         }
@@ -70,13 +81,14 @@ public  class VotingKiosk
             this.opcioVot = party;
             v1.scrutinize(opcioVot);
             eO.disableVoter(nif);
+            nifSet = false;
         }
     }
 
     public void sendeReceipt(MailAdress address) throws NullException {
 
 
-        if (eO.canVote(nif) || !eOServiceActivated || !mServiceActivated)
+        if (eO.canVote(nif) || !eOServiceSet || !mServiceSet)
         {
             throw new IllegalStateException();
         }
