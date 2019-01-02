@@ -9,7 +9,7 @@ public abstract class VotingKiosk
 {
     private VoteCounter v1;
     private Nif nif;
-    private boolean votEscrutat;
+
     private Party opcioVot;
 
 
@@ -20,7 +20,7 @@ public abstract class VotingKiosk
 
     public VotingKiosk()
     {
-        this.votEscrutat = false;
+
     }
 
     public void setElectoralOrganism(ElectoralOrganism eO)
@@ -35,7 +35,7 @@ public abstract class VotingKiosk
 
     public void vote(Party party) throws NullPartyException
     {
-        if (!eO.canVote(nif)  || votEscrutat == true)
+        if (!eO.canVote(nif))
         {
             throw new IllegalStateException();
         }
@@ -44,14 +44,13 @@ public abstract class VotingKiosk
             this.opcioVot = party;
             v1.scrutinize(opcioVot);
             eO.disableVoter(nif);
-            votEscrutat = true;
         }
     }
 
     public void sendeReceipt(MailAdress address) throws NullException {
 
 
-        if (!eO.canVote(nif) && votEscrutat == true)
+        if (!eO.canVote(nif))
         {
             DigitalSignature digitalSignature = eO.askForDigitalSignature(opcioVot);
             mService.send(address, digitalSignature);
@@ -61,5 +60,4 @@ public abstract class VotingKiosk
             throw new IllegalStateException();
         }
     }
-
 }
