@@ -45,7 +45,8 @@ class VotingKioskTest
 
         @Override
         public DigitalSignature askForDigitalSignature(Party party) throws NullException {
-            DigitalSignature sign = new DigitalSignature(new byte[]{Byte.parseByte(party.toString())});
+            //DigitalSignature sign = new DigitalSignature(new byte[] {Byte.parseByte(party.toString())});
+            DigitalSignature sign = new DigitalSignature(new byte[]{0, 0});
             return sign;
         }
     }
@@ -80,6 +81,8 @@ class VotingKioskTest
         Nif nif = new Nif("48057957D");
         MailAdress mail = new MailAdress("rubencolomer.1@gmail.com");
 
+        //Encara no s'han establit els serveis
+
         assertThrows(IllegalStateException.class, () -> vk.vote(party));
         assertThrows(IllegalStateException.class, () -> vk.sendeReceipt(mail));
     }
@@ -104,8 +107,29 @@ class VotingKioskTest
     }
 
     @Test
-    void testSendeReceipt()
-    {
+    void testSendeReceipt() throws NullException, EmailDoesNotExistsException, NullPartyException, NifDoesNotExistsException {
+        VotingKiosk vk = new VotingKiosk();
+        ElectoralOrganismDoble eOD = new ElectoralOrganismDoble();
+        MailerServiceDoble mSD = new MailerServiceDoble();
+        Party party = new Party("party");
+        Nif nif = new Nif("48057957D");
+        MailAdress mail = new MailAdress("rubencolomer.1@gmail.com");
+        Set<Party> validParties = new HashSet<>();
+        validParties.add(party);
+        vk.v1 = new VoteCounter(validParties);
+        vk.setElectoralOrganism(eOD);
+        vk.setMailerService(mSD);
+        vk.SetNif(nif);
+        eOD.nifsCanVote.add(nif);
+
+        //Encara no s'ha votat
+
+        assertThrows(IllegalStateException.class, () -> vk.sendeReceipt(mail));
+
+        vk.vote(party);
+        vk.sendeReceipt(mail);
+
+        assertTrue(mSD.emailSended);
 
     }
 }
