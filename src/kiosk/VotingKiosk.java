@@ -5,9 +5,12 @@ import Exceptions.NullPartyException;
 import data.*;
 import  services.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public  class VotingKiosk
 {
-    private VoteCounter v1;
+    public VoteCounter v1;
     private Nif nif;
 
     private Party opcioVot;
@@ -20,13 +23,12 @@ public  class VotingKiosk
     private boolean mServiceSet;
     private boolean nifSet;
 
-
-
     public VotingKiosk()
     {
         this.eOServiceSet = false;
         this.mServiceSet = false;
         this.nifSet = false;
+        this.v1 = new VoteCounter(null);
     }
 
     public void setElectoralOrganism(ElectoralOrganism eO)

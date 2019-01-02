@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e2f1a72-4a26-4fd9-a06a-a5a389592fef" name="Default Changelist" comment="">
+    <list default="true" id="5e2f1a72-4a26-4fd9-a06a-a5a389592fef" name="Default Changelist" comment="VotingKiosk_9">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kiosk/VotingKiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk/VotingKiosk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/kiosk/VotingKiosk.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kiosk/VoteCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+            <state relative-caret-position="612">
+              <caret line="54" column="22" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,16 +28,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kiosk/VotingKiosk.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-238">
+              <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="95" column="38" lean-forward="true" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
+            <state relative-caret-position="352">
+              <caret line="102" column="38" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#746#747#0" expanded="true" />
                 <element signature="e#784#785#0" expanded="true" />
                 <element signature="e#1287#1288#0" expanded="true" />
                 <element signature="e#1329#1330#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/kiosk/VoteCounterTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-560">
+              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,8 +104,8 @@
         <option value="$PROJECT_DIR$/tests/data/MailAdressTest.java" />
         <option value="$PROJECT_DIR$/tests/data/NifTest.java" />
         <option value="$PROJECT_DIR$/tests/data/PartyTest.java" />
-        <option value="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" />
         <option value="$PROJECT_DIR$/src/kiosk/VotingKiosk.java" />
+        <option value="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" />
       </list>
     </option>
   </component>
@@ -157,7 +182,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546468067852" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546470072509" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
@@ -182,31 +207,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PartyTest">
-    <configuration name="DigitalSignatureTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.VotingKioskTest.testVote">
+    <configuration name="VotingKioskTest.testVote" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
       <module name="Prac_Proves" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data.*" />
+          <option name="PATTERN" value="kiosk.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="data" />
-      <option name="MAIN_CLASS_NAME" value="data.DigitalSignatureTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MailAdressTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Prac_Proves" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="data.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="data" />
-      <option name="MAIN_CLASS_NAME" value="data.MailAdressTest" />
+      <option name="PACKAGE_NAME" value="kiosk" />
+      <option name="MAIN_CLASS_NAME" value="kiosk.VotingKioskTest" />
+      <option name="METHOD_NAME" value="testVote" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -253,13 +266,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VotingKioskTest.testVote" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Prac_Proves" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kiosk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kiosk" />
+      <option name="MAIN_CLASS_NAME" value="kiosk.VotingKioskTest" />
+      <option name="METHOD_NAME" value="testVote" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VotingKioskTest.testVote" />
+        <item itemvalue="JUnit.VoteCounterTest" />
+        <item itemvalue="Android JUnit.VotingKioskTest.testVote" />
         <item itemvalue="JUnit.PartyTest" />
         <item itemvalue="JUnit.NifTest" />
-        <item itemvalue="JUnit.MailAdressTest" />
-        <item itemvalue="JUnit.DigitalSignatureTest" />
-        <item itemvalue="JUnit.VoteCounterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -309,39 +338,53 @@
       <option name="project" value="LOCAL" />
       <updated>1546467540201</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="VotingKiosk_8">
+      <created>1546468092511</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1546468092511</updated>
+    </task>
+    <task id="LOCAL-00007" summary="VotingKiosk_9">
+      <created>1546468246684</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1546468246684</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VoteCounterTest_testScrutinize - 2018.12.30 at 23h 00m 22s.xml">
-      <configuration name="VoteCounterTest.testScrutinize" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="VoteCounterTest_testScrutinize - 2018.12.30 at 23h 00m 30s.xml">
-      <configuration name="VoteCounterTest.testScrutinize" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="VoteCounterTest - 2018.12.30 at 23h 00m 57s.xml">
-      <configuration name="VoteCounterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VoteCounterTest - 2018.12.30 at 23h 01m 26s.xml">
-      <configuration name="VoteCounterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VoteCounterTest - 2019.01.01 at 00h 10m 41s.xml">
-      <configuration name="VoteCounterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DigitalSignatureTest - 2019.01.02 at 20h 01m 25s.xml">
-      <configuration name="DigitalSignatureTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DigitalSignatureTest - 2019.01.02 at 20h 03m 03s.xml">
-      <configuration name="DigitalSignatureTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MailAdressTest - 2019.01.02 at 20h 11m 14s.xml">
-      <configuration name="MailAdressTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NifTest - 2019.01.02 at 20h 13m 29s.xml">
-      <configuration name="NifTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PartyTest - 2019.01.02 at 20h 14m 42s.xml">
       <configuration name="PartyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VotingKioskTest_testVote - 2019.01.02 at 23h 34m 57s.xml">
+      <configuration name="VotingKioskTest.testVote" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VotingKioskTest_testVote - 2019.01.02 at 23h 37m 32s.xml">
+      <configuration name="VotingKioskTest.testVote" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="VotingKioskTest_testVote - 2019.01.02 at 23h 43m 02s.xml">
+      <configuration name="VotingKioskTest.testVote" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="VoteCounterTest - 2019.01.02 at 23h 45m 57s.xml">
+      <configuration name="VoteCounterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoteCounterTest - 2019.01.02 at 23h 48m 16s.xml">
+      <configuration name="VoteCounterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VotingKioskTest_testVote - 2019.01.02 at 23h 48m 30s.xml">
+      <configuration name="VotingKioskTest.testVote" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VotingKioskTest_testVote - 2019.01.02 at 23h 56m 51s.xml">
+      <configuration name="VotingKioskTest.testVote" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VotingKioskTest_testVote - 2019.01.02 at 23h 57m 32s.xml">
+      <configuration name="VotingKioskTest.testVote" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VotingKioskTest_testVote - 2019.01.02 at 23h 59m 32s.xml">
+      <configuration name="VotingKioskTest.testVote" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -362,15 +405,15 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.27114093" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.27114093" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -391,7 +434,9 @@
     <MESSAGE value="VotingKiosk_6" />
     <MESSAGE value="VotingKiosk_7" />
     <MESSAGE value="VotingKioskTest_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="VotingKioskTest_2" />
+    <MESSAGE value="VotingKiosk_8" />
+    <MESSAGE value="VotingKiosk_9" />
+    <option name="LAST_COMMIT_MESSAGE" value="VotingKiosk_9" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Object.java">
@@ -447,16 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kiosk/VoteCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -521,8 +556,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/kiosk/VoteCounterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        <state relative-caret-position="-560">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kiosk/VoteCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kiosk/VotingKiosk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -531,24 +586,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="95" column="38" lean-forward="true" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
+        <state relative-caret-position="352">
+          <caret line="102" column="38" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#746#747#0" expanded="true" />
             <element signature="e#784#785#0" expanded="true" />
             <element signature="e#1287#1288#0" expanded="true" />
             <element signature="e#1329#1330#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kiosk/VotingKiosk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
