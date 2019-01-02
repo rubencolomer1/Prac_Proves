@@ -16,26 +16,48 @@ public abstract class VotingKiosk
     private MailerService mService;
     private ElectoralOrganism eO;
 
+    private boolean eOServiceActivated;
+    private boolean mServiceActivated;
+
 
 
     public VotingKiosk()
     {
-
+        this.eOServiceActivated = false;
+        this.mServiceActivated = false;
     }
 
     public void setElectoralOrganism(ElectoralOrganism eO)
     {
-        this.eO = eO;
+        if (!eOServiceActivated)
+        {
+            this.eO = eO;
+            eOServiceActivated = true;
+        }
+        else
+        {
+            throw new IllegalStateException();
+        }
+
     }
 
     public void setMailerService(MailerService mService)
     {
-        this.mService = mService;
+        if (!mServiceActivated)
+        {
+            this.mService = mService;
+            mServiceActivated = true;
+        }
+        else
+        {
+            throw new IllegalStateException();
+        }
+
     }
 
     public void vote(Party party) throws NullPartyException
     {
-        if (!eO.canVote(nif))
+        if (!eO.canVote(nif) || !eOServiceActivated || !mServiceActivated)
         {
             throw new IllegalStateException();
         }
@@ -47,17 +69,17 @@ public abstract class VotingKiosk
         }
     }
 
-    public void sendeReceipt(MailAdress address) throws NullException {
+    public void sendeReceipt(MailAdress address) {
 
 
-        if (!eO.canVote(nif))
+        if (eO.canVote(nif) || !eOServiceActivated || !mServiceActivated)
         {
-            DigitalSignature digitalSignature = eO.askForDigitalSignature(opcioVot);
-            mService.send(address, digitalSignature);
+            throw new IllegalStateException();
         }
         else
         {
-            throw new IllegalStateException();
+            DigitalSignature digitalSignature = eO.askForDigitalSignature(opcioVot);
+            mService.send(address, digitalSignature);
         }
     }
 }
