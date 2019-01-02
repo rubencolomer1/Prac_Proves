@@ -20,10 +20,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VotingKioskTest
 {
-    private Party party;
-    private Nif nif;
-    private MailAdress mail;
-
     private static class ElectoralOrganismDoble implements ElectoralOrganism
     {
         private List<Nif> nifsCanVote = new ArrayList();
@@ -76,9 +72,9 @@ class VotingKioskTest
     }
     @Test
     void votingKioskServicesNotSetted() throws NullException, NifDoesNotExistsException, EmailDoesNotExistsException {
-        party = new Party("party");
-        nif = new Nif("48057957D");
-        mail = new MailAdress("rubencolomer.1@gmail.com");
+        Party party = new Party("party");
+        Nif nif = new Nif("48057957D");
+        MailAdress mail = new MailAdress("rubencolomer.1@gmail.com");
         VotingKiosk vk = new VotingKiosk();
         assertThrows(IllegalStateException.class, () -> vk.vote(party));
         assertThrows(IllegalStateException.class, () -> vk.sendeReceipt(mail));
@@ -88,10 +84,11 @@ class VotingKioskTest
         VotingKiosk vk = new VotingKiosk();
         ElectoralOrganismDoble eOD = new ElectoralOrganismDoble();
         MailerServiceDoble mSD = new MailerServiceDoble();
+        Party party = new Party("party");
+        Nif nif = new Nif("48057957D");
         vk.setElectoralOrganism(eOD);
         vk.setMailerService(mSD);
-        party = new Party("party");
-        nif = new Nif("48057957D");
+        vk.SetNif(nif);
         vk.vote(party);
         assertFalse(eOD.canVote(nif));
     }

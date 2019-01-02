@@ -72,7 +72,7 @@ public  class VotingKiosk
 
     public void vote(Party party) throws NullPartyException
     {
-        if (!eO.canVote(nif) || !eOServiceSet || !mServiceSet)
+        if (!eO.canVote(nif) || !eOServiceSet || !mServiceSet || !nifSet)
         {
             throw new IllegalStateException();
         }
