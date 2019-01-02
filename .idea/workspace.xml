@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e2f1a72-4a26-4fd9-a06a-a5a389592fef" name="Default Changelist" comment="VotingKiosk_5">
+    <list default="true" id="5e2f1a72-4a26-4fd9-a06a-a5a389592fef" name="Default Changelist" comment="VotingKioskTest_1">
       <change afterPath="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kiosk/VotingKiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk/VotingKiosk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ElectoralOrganism.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ElectoralOrganism.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kiosk/VotingKiosk.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="159">
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="193">
+              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
               <folding>
                 <element signature="e#746#747#0" expanded="true" />
                 <element signature="e#784#785#0" expanded="true" />
@@ -88,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/services/ElectoralOrganism.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,8 +155,8 @@
         <option value="$PROJECT_DIR$/tests/data/MailAdressTest.java" />
         <option value="$PROJECT_DIR$/tests/data/NifTest.java" />
         <option value="$PROJECT_DIR$/tests/data/PartyTest.java" />
-        <option value="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" />
         <option value="$PROJECT_DIR$/src/kiosk/VotingKiosk.java" />
+        <option value="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" />
       </list>
     </option>
   </component>
@@ -218,6 +218,12 @@
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Prac_Proves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Prac_Proves" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="kiosk" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -227,7 +233,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546464580249" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546464719193" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
@@ -344,6 +350,14 @@
       <option name="presentableId" value="Default" />
       <updated>1546200264553</updated>
     </task>
+    <task id="LOCAL-00001" summary="VotingKiosk_5">
+      <created>1546464599448</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1546464599449</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -421,7 +435,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="VotingKiosk_5" />
-    <option name="LAST_COMMIT_MESSAGE" value="VotingKiosk_5" />
+    <MESSAGE value="VotingKioskTest_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="VotingKioskTest_1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Object.java">
@@ -535,7 +550,7 @@
     <entry file="file://$PROJECT_DIR$/src/services/ElectoralOrganism.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -552,25 +567,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1329#1330#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/kiosk/VotingKiosk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+          <folding>
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1329#1330#0" expanded="true" />
           </folding>
         </state>
       </provider>
