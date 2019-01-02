@@ -45,8 +45,7 @@ class VotingKioskTest
 
         @Override
         public DigitalSignature askForDigitalSignature(Party party) throws NullException {
-            //DigitalSignature sign = new DigitalSignature(new byte[] {Byte.parseByte(party.toString())});
-            DigitalSignature sign = new DigitalSignature(new byte[]{0, 0});
+            DigitalSignature sign = new DigitalSignature(party.toString().getBytes());
             return sign;
         }
     }
