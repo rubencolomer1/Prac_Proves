@@ -74,7 +74,7 @@ public  class VotingKiosk
 
     public void vote(Party party) throws NullPartyException
     {
-        if (!eO.canVote(nif) || !eOServiceSet || !mServiceSet || !nifSet)
+        if (!eOServiceSet || !mServiceSet || !eO.canVote(nif) || !nifSet)
         {
             throw new IllegalStateException();
         }
@@ -90,7 +90,7 @@ public  class VotingKiosk
     public void sendeReceipt(MailAdress address) throws NullException {
 
 
-        if (eO.canVote(nif) || !eOServiceSet || !mServiceSet)
+        if (!eOServiceSet || !mServiceSet || eO.canVote(nif))
         {
             throw new IllegalStateException();
         }
