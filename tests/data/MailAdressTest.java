@@ -2,24 +2,23 @@ package data;
 
 import Exceptions.EmailDoesNotExistsException;
 import Exceptions.NullException;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MailAdressTest {
-    private MailAdress mail1, mail2;
+class MailAdressTest
+{
+    public MailAdress mail1, mail2, emailCorrect1, emailCorrect2, emailCorrect3;
 
+    @BeforeEach
+    void init() throws NullException, EmailDoesNotExistsException
     {
-        try {
-
-            mail1 = new MailAdress("rubencolomer.1@gmail.com");
-            mail2 = new MailAdress("rubencolomer.1@gmail.com");
-
-        } catch (NullException e) {
-            e.printStackTrace();
-        } catch (EmailDoesNotExistsException e) {
-            e.printStackTrace();
-        }
+        mail1 = new MailAdress("rubencolomer.1@gmail.com");
+        mail2 = new MailAdress("rubencolomer.1@gmail.com");
+        emailCorrect1 = new MailAdress("me@gmail.com");
+        emailCorrect2 = new MailAdress("me@1.com");
+        emailCorrect3 = new MailAdress("me_1@1.com");
     }
 
     @Test
@@ -50,24 +49,8 @@ class MailAdressTest {
     @Test
     void testIsValidEmailAddress()
     {
-        MailAdress emailCorrect1 = null;
-        MailAdress emailCorrect2 = null;
-        MailAdress emailCorrect3 = null;;
-
-        try {
-            emailCorrect1 = new MailAdress("me@gmail.com");
-            emailCorrect2 = new MailAdress("me@1.com");
-            emailCorrect3 = new MailAdress("me_1@1.com");
-
-        } catch (EmailDoesNotExistsException e) {
-            e.printStackTrace();
-        } catch (NullException e) {
-            e.printStackTrace();
-        }
-
         assertTrue(emailCorrect1.isValidEmailAddress(emailCorrect1.getMailAdress()));
         assertTrue(emailCorrect2.isValidEmailAddress(emailCorrect2.getMailAdress()));
         assertTrue(emailCorrect3.isValidEmailAddress(emailCorrect3.getMailAdress()));
-
     }
 }

@@ -2,24 +2,23 @@ package data;
 
 import Exceptions.NullException;
 import Exceptions.NifDoesNotExistsException;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class NifTest {
-    private Nif nif1, nif2;
+    public Nif nif1, nif2, nifCorrect1, nifCorrect2, nifCorrect3;
 
+    @BeforeEach
+    void init() throws NullException, NifDoesNotExistsException
     {
-        try {
-            nif1 = new Nif("48057957D");
-            nif2 = new Nif("48057957D");
-        } catch (NullException e) {
-            e.printStackTrace();
-        } catch (NifDoesNotExistsException e) {
-            e.printStackTrace();
-        }
+        nif1 = new Nif("48057957D");
+        nif2 = new Nif("48057957D");
+        nifCorrect1 = new Nif("73210173T");
+        nifCorrect2 = new Nif("48057957D");
+        nifCorrect3 = new Nif("12345678A");
     }
-
 
     @Test
     void testGetNif()
@@ -49,24 +48,8 @@ class NifTest {
     @Test
     void testIsValidEmailAddress()
     {
-        Nif nifCorrect1 = null;
-        Nif nifCorrect2 = null;
-        Nif nifCorrect3 = null;
-
-        try {
-            nifCorrect1 = new Nif("73210173T");
-            nifCorrect2 = new Nif("48057957D");
-            nifCorrect3 = new Nif("12345678A");
-
-        } catch (NifDoesNotExistsException e) {
-            e.printStackTrace();
-        } catch (NullException e) {
-            e.printStackTrace();
-        }
-
         assertTrue(nifCorrect1.isValidNif(nifCorrect1.getNif()));
         assertTrue(nifCorrect2.isValidNif(nifCorrect2.getNif()));
         assertTrue(nifCorrect3.isValidNif(nifCorrect3.getNif()));
-
     }
 }

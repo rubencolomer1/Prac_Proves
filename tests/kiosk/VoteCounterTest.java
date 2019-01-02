@@ -13,9 +13,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VoteCounterTest
 {
-    private Party partit1, partit2, partit3;
-    private Set<Party> validParties;
-    private VoteCounter v1;
+    public Party partit1, partit2, partit3;
+    public Set<Party> validParties;
+    public VoteCounter v1;
 
     @BeforeEach
     void init() throws NullException

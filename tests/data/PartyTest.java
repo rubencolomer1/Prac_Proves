@@ -1,21 +1,19 @@
 package data;
 
 import Exceptions.NullException;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PartyTest
 {
-    private Party partit1, partit2;
-    {
-        try
-        {
-            partit1 = new Party("hola");
-            partit2 = new Party("hola");
-        } catch (NullException e) {
-            e.printStackTrace();
-        }
+    public Party partit1, partit2;
+
+    @BeforeEach
+    void init() throws NullException {
+        partit1 = new Party("hola");
+        partit2 = new Party("hola");
     }
 
     @Test
