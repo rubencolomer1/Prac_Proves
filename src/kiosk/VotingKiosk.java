@@ -5,7 +5,7 @@ import Exceptions.NullPartyException;
 import data.*;
 import  services.*;
 
-public abstract class VotingKiosk
+public  class VotingKiosk
 {
     private VoteCounter v1;
     private Nif nif;
@@ -69,7 +69,7 @@ public abstract class VotingKiosk
         }
     }
 
-    public void sendeReceipt(MailAdress address) {
+    public void sendeReceipt(MailAdress address) throws NullException {
 
 
         if (eO.canVote(nif) || !eOServiceActivated || !mServiceActivated)
