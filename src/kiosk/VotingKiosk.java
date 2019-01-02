@@ -54,6 +54,10 @@ public  class VotingKiosk
         }
 
     }
+    public void SetNif(Nif nif)
+    {
+        this.nif = nif;
+    }
 
     public void vote(Party party) throws NullPartyException
     {
