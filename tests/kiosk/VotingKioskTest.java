@@ -14,7 +14,9 @@ import services.ElectoralOrganism;
 import services.MailerService;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -58,7 +60,7 @@ class VotingKioskTest
             emailSended = true;
         }
     }
-    //Es torna a intentar activar els serveis del voting Kiosk
+
     @Test
     void votingKioskServicesAlreadySetted()
     {
@@ -70,15 +72,18 @@ class VotingKioskTest
         assertThrows(IllegalStateException.class, () -> vk.setMailerService(mSD));
         assertThrows(IllegalStateException.class, () -> vk.setElectoralOrganism(eOD));
     }
+
     @Test
     void votingKioskServicesNotSetted() throws NullException, NifDoesNotExistsException, EmailDoesNotExistsException {
+        VotingKiosk vk = new VotingKiosk();
         Party party = new Party("party");
         Nif nif = new Nif("48057957D");
         MailAdress mail = new MailAdress("rubencolomer.1@gmail.com");
-        VotingKiosk vk = new VotingKiosk();
+
         assertThrows(IllegalStateException.class, () -> vk.vote(party));
         assertThrows(IllegalStateException.class, () -> vk.sendeReceipt(mail));
     }
+
     @Test
     void testVote() throws NullException, NullPartyException, NifDoesNotExistsException {
         VotingKiosk vk = new VotingKiosk();
@@ -86,9 +91,14 @@ class VotingKioskTest
         MailerServiceDoble mSD = new MailerServiceDoble();
         Party party = new Party("party");
         Nif nif = new Nif("48057957D");
+        Set<Party> validParties = new HashSet<>();
+        validParties.add(party);
+        vk.v1 = new VoteCounter(validParties);
         vk.setElectoralOrganism(eOD);
         vk.setMailerService(mSD);
         vk.SetNif(nif);
+        eOD.nifsCanVote.add(nif);
+
         vk.vote(party);
         assertFalse(eOD.canVote(nif));
     }
