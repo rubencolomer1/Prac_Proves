@@ -5,9 +5,6 @@ import Exceptions.NullPartyException;
 import data.*;
 import  services.*;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public  class VotingKiosk
 {
     public VoteCounter v1;
