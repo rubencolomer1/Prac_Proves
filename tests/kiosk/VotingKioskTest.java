@@ -8,6 +8,7 @@ import data.DigitalSignature;
 import data.MailAdress;
 import data.Nif;
 import data.Party;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import services.ElectoralOrganism;
@@ -22,6 +23,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VotingKioskTest
 {
+    public VotingKiosk vk;
+    public ElectoralOrganismDoble eOD;
+    public MailerServiceDoble mSD;
+
     private static class ElectoralOrganismDoble implements ElectoralOrganism
     {
         private List<Nif> nifsCanVote = new ArrayList();
@@ -61,12 +66,17 @@ class VotingKioskTest
         }
     }
 
+    @BeforeEach
+    void init()
+    {
+        vk = new VotingKiosk();
+        eOD = new ElectoralOrganismDoble();
+        mSD = new MailerServiceDoble();
+    }
+
     @Test
     void votingKioskServicesAlreadySetted()
     {
-        VotingKiosk vk = new VotingKiosk();
-        ElectoralOrganismDoble eOD = new ElectoralOrganismDoble();
-        MailerServiceDoble mSD = new MailerServiceDoble();
         vk.setElectoralOrganism(eOD);
         vk.setMailerService(mSD);
         assertThrows(IllegalStateException.class, () -> vk.setMailerService(mSD));
@@ -96,6 +106,11 @@ class VotingKioskTest
         Set<Party> validParties = new HashSet<>();
         validParties.add(party);
         vk.v1 = new VoteCounter(validParties);
+
+        //Serveis no establits.
+
+        assertThrows(IllegalStateException.class, () -> vk.vote(party));
+
         vk.setElectoralOrganism(eOD);
         vk.setMailerService(mSD);
         vk.SetNif(nif);
@@ -116,6 +131,10 @@ class VotingKioskTest
         Set<Party> validParties = new HashSet<>();
         validParties.add(party);
         vk.v1 = new VoteCounter(validParties);
+
+        //Serveis no establits.
+        assertThrows(IllegalStateException.class, () -> vk.vote(party));
+
         vk.setElectoralOrganism(eOD);
         vk.setMailerService(mSD);
         vk.SetNif(nif);
