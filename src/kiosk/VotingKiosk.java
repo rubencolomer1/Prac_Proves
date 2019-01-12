@@ -1,7 +1,6 @@
 package kiosk;
 
-import Exceptions.NullException;
-import Exceptions.NullPartyException;
+import Exceptions.*;
 import data.*;
 import  services.*;
 
@@ -28,8 +27,7 @@ public  class VotingKiosk
         this.v1 = new VoteCounter(null);
     }
 
-    public void setElectoralOrganism(ElectoralOrganism eO)
-    {
+    public void setElectoralOrganism(ElectoralOrganism eO) throws AlreadySetServiceException {
         if (!eOServiceSet)
         {
             this.eO = eO;
@@ -37,13 +35,12 @@ public  class VotingKiosk
         }
         else
         {
-            throw new IllegalStateException();
+            throw new AlreadySetServiceException("Serveis ja establits!");
         }
 
     }
 
-    public void setMailerService(MailerService mService)
-    {
+    public void setMailerService(MailerService mService) throws AlreadySetServiceException {
         if (!mServiceSet)
         {
             this.mService = mService;
@@ -51,12 +48,11 @@ public  class VotingKiosk
         }
         else
         {
-            throw new IllegalStateException();
+            throw new AlreadySetServiceException("Serveis ja establits!");
         }
 
     }
-    public void SetNif(Nif nif)
-    {
+    public void SetNif(Nif nif) throws AlreadySetNifException {
         if (!nifSet)
         {
             this.nif = nif;
@@ -64,16 +60,24 @@ public  class VotingKiosk
         }
         else
         {
-            throw new IllegalStateException();
+            throw new AlreadySetNifException("Nif ja establit!");
         }
 
     }
 
-    public void vote(Party party) throws NullPartyException
-    {
-        if (!eOServiceSet || !mServiceSet || !eO.canVote(nif) || !nifSet)
+    public void vote(Party party) throws NullPartyException, ServicesNotSetException, NifNotSetException, NifCannotVoteException {
+        if (!eOServiceSet || !mServiceSet)
         {
-            throw new IllegalStateException();
+            throw new ServicesNotSetException("Serveis no establits!");
+        }
+
+        else if (!nifSet)
+        {
+            throw new NifNotSetException("Nif no establit!");
+        }
+        else if (!eO.canVote(nif))
+        {
+            throw new NifCannotVoteException("Aquest Nif no pot votar!");
         }
         else
         {
@@ -84,12 +88,16 @@ public  class VotingKiosk
         }
     }
 
-    public void sendeReceipt(MailAdress address) throws NullException {
+    public void sendeReceipt(MailAdress address) throws NullException, ServicesNotSetException, HasNotVotesYetException {
 
 
-        if (!eOServiceSet || !mServiceSet || eO.canVote(nif))
+        if (!eOServiceSet || !mServiceSet)
         {
-            throw new IllegalStateException();
+            throw new ServicesNotSetException("Serveis no establits!");
+        }
+        else if(eO.canVote(nif))
+        {
+            throw new HasNotVotesYetException("Encara no ha votat");
         }
         else
         {

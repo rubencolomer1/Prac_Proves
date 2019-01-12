@@ -1,9 +1,6 @@
 package kiosk;
 
-import Exceptions.EmailDoesNotExistsException;
-import Exceptions.NifDoesNotExistsException;
-import Exceptions.NullException;
-import Exceptions.NullPartyException;
+import Exceptions.*;
 import data.DigitalSignature;
 import data.MailAdress;
 import data.Nif;
@@ -75,16 +72,15 @@ class VotingKioskTest
     }
 
     @Test
-    void votingKioskServicesAlreadySetted()
-    {
+    void votingKioskServicesAlreadySetted() throws AlreadySetServiceException {
         vk.setElectoralOrganism(eOD);
         vk.setMailerService(mSD);
-        assertThrows(IllegalStateException.class, () -> vk.setMailerService(mSD));
-        assertThrows(IllegalStateException.class, () -> vk.setElectoralOrganism(eOD));
+        assertThrows(AlreadySetServiceException.class, () -> vk.setMailerService(mSD));
+        assertThrows(AlreadySetServiceException.class, () -> vk.setElectoralOrganism(eOD));
     }
 
     @Test
-    void votingKioskServicesNotSetted() throws NullException, NifDoesNotExistsException, EmailDoesNotExistsException
+    void votingKioskServicesNotSet() throws NullException, NifDoesNotExistsException, EmailDoesNotExistsException
     {
 
         Party party = new Party("party");
@@ -93,12 +89,38 @@ class VotingKioskTest
 
         //Encara no s'han establit els serveis
 
-        assertThrows(IllegalStateException.class, () -> vk.vote(party));
-        assertThrows(IllegalStateException.class, () -> vk.sendeReceipt(mail));
+        assertThrows(ServicesNotSetException.class, () -> vk.vote(party));
+        assertThrows(ServicesNotSetException.class, () -> vk.sendeReceipt(mail));
     }
 
     @Test
-    void testVote() throws NullException, NullPartyException, NifDoesNotExistsException
+    void nifNotSet() throws NullException, EmailDoesNotExistsException, NifDoesNotExistsException, AlreadySetServiceException
+    {
+        Party party = new Party("party");
+        Nif nif = new Nif("48057957D");
+        MailAdress mail = new MailAdress("rubencolomer.1@gmail.com");
+
+        vk.setElectoralOrganism(eOD);
+        vk.setMailerService(mSD);
+
+        assertThrows(NifNotSetException.class, () -> vk.vote(party));
+    }
+
+    @Test
+    void nifAlreadySet() throws NullException, EmailDoesNotExistsException, NifDoesNotExistsException, AlreadySetServiceException, AlreadySetNifException
+    {
+        Party party = new Party("party");
+        Nif nif = new Nif("48057957D");
+        MailAdress mail = new MailAdress("rubencolomer.1@gmail.com");
+
+        vk.setElectoralOrganism(eOD);
+        vk.setMailerService(mSD);
+        vk.SetNif(nif);
+        assertThrows(AlreadySetNifException.class, () -> vk.SetNif(nif));
+
+    }
+    @Test
+    void testVote() throws NullException, NullPartyException, NifDoesNotExistsException, ServicesNotSetException, NifCannotVoteException, NifNotSetException, AlreadySetServiceException, AlreadySetNifException
     {
 
         Party party = new Party("party");
@@ -106,14 +128,13 @@ class VotingKioskTest
         Set<Party> validParties = new HashSet<>();
         validParties.add(party);
         vk.v1 = new VoteCounter(validParties);
-
-        //Serveis no establits.
-
-        assertThrows(IllegalStateException.class, () -> vk.vote(party));
-
+        vk.SetNif(nif);
         vk.setElectoralOrganism(eOD);
         vk.setMailerService(mSD);
-        vk.SetNif(nif);
+
+        //Aquell Nif no pot votar
+        assertThrows(NifCannotVoteException.class, () -> vk.vote(party));
+
         eOD.nifsCanVote.add(nif);
 
         vk.vote(party);
@@ -121,7 +142,7 @@ class VotingKioskTest
     }
 
     @Test
-    void testSendeReceipt() throws NullException, EmailDoesNotExistsException, NullPartyException, NifDoesNotExistsException
+    void testSendeReceipt() throws NullException, EmailDoesNotExistsException, NullPartyException, NifDoesNotExistsException, ServicesNotSetException, NifCannotVoteException, NifNotSetException, HasNotVotesYetException, AlreadySetServiceException, AlreadySetNifException
     {
 
         Party party = new Party("party");
@@ -130,10 +151,6 @@ class VotingKioskTest
         Set<Party> validParties = new HashSet<>();
         validParties.add(party);
         vk.v1 = new VoteCounter(validParties);
-
-        //Serveis no establits.
-        assertThrows(IllegalStateException.class, () -> vk.vote(party));
-
         vk.setElectoralOrganism(eOD);
         vk.setMailerService(mSD);
         vk.SetNif(nif);
@@ -141,7 +158,7 @@ class VotingKioskTest
 
         //Encara no s'ha votat
 
-        assertThrows(IllegalStateException.class, () -> vk.sendeReceipt(mail));
+        assertThrows(HasNotVotesYetException.class, () -> vk.sendeReceipt(mail));
 
         vk.vote(party);
         vk.sendeReceipt(mail);
