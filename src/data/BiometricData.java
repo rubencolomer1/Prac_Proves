@@ -1,11 +1,6 @@
 package data;
 
-import Exceptions.BiometricScannerNotSet;
 import Exceptions.NoFacialPointsException;
-import services.BiometricScanner;
-import services.BiometricReader;
-import services.BiometricSoftware;
-
 import java.math.BigInteger;
 
 public class BiometricData
@@ -13,22 +8,18 @@ public class BiometricData
     //facial points
     private BigInteger facialKey;
     private BigInteger fingerPrint;
-    private BiometricScanner bS;
-    private BiometricReader bR;
-    private BiometricSoftware bSW;
-    public boolean bSSet;
-    public boolean bRSet;
-    public boolean bSWSet;
-    public boolean facialKeySet;
-    public boolean fingerPrintSet;
 
-    public BiometricData()
+    public BiometricData(BigInteger facialKey, BigInteger fingerPrint) throws NoFacialPointsException
     {
-        this.bRSet = false;
-        this.bSSet = false;
-        this.bSWSet = false;
-        this.facialKeySet = false;
-        this.fingerPrintSet = false;
+        if (facialKey == null || fingerPrint == null)
+        {
+            throw new NoFacialPointsException("facialKey and fingerPrint cannot be null!");
+        }
+        else
+        {
+            this.fingerPrint = fingerPrint;
+            this.facialKey = facialKey;
+        }
     }
 
     @Override
@@ -44,34 +35,13 @@ public class BiometricData
         return "BiometricData{" + "facial='" + this.facialKey + '\'' + ", fingerprint='" + this.fingerPrint + '\'' +'}';
     }
 
-    public void setBiometricScanner(BiometricScanner bS)
+    public BigInteger getFacialKey()
     {
-        this.bS = bS;
-        this.bSSet = true;
-    }
-    public void setBiometricReader(BiometricReader bR)
-    {
-        this.bR = bR;
-        this.bRSet = true;
+        return facialKey;
     }
 
-    public void setBiometricSoftware(BiometricSoftware bSW)
+    public BigInteger getFingerPrint()
     {
-        this.bSW = bSW;
-        this.bSWSet = true;
-    }
-
-    public void getBiometricFacials() throws BiometricScannerNotSet
-    {
-        if (!bSSet)
-        {
-            throw new BiometricScannerNotSet("Biometric Scanner not set!");
-        }
-        else
-        {
-            this.facialKey = bS.scanFace();
-            this.fingerPrint = bS.scanFingerprint();
-        }
-
+        return fingerPrint;
     }
 }
