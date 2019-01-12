@@ -72,7 +72,7 @@ class VotingKioskTest
     }
 
     @Test
-    void votingKioskServicesAlreadySetted() throws AlreadySetServiceException {
+    void testVotingKioskServicesAlreadySetted() throws AlreadySetServiceException {
         vk.setElectoralOrganism(eOD);
         vk.setMailerService(mSD);
         assertThrows(AlreadySetServiceException.class, () -> vk.setMailerService(mSD));
@@ -80,7 +80,7 @@ class VotingKioskTest
     }
 
     @Test
-    void votingKioskServicesNotSet() throws NullException, NifDoesNotExistsException, EmailDoesNotExistsException
+    void testVotingKioskServicesNotSet() throws NullException, NifDoesNotExistsException, EmailDoesNotExistsException
     {
 
         Party party = new Party("party");
@@ -94,7 +94,7 @@ class VotingKioskTest
     }
 
     @Test
-    void nifNotSet() throws NullException, EmailDoesNotExistsException, NifDoesNotExistsException, AlreadySetServiceException
+    void testNifNotSet() throws NullException, EmailDoesNotExistsException, NifDoesNotExistsException, AlreadySetServiceException
     {
         Party party = new Party("party");
         Nif nif = new Nif("48057957D");
@@ -107,7 +107,7 @@ class VotingKioskTest
     }
 
     @Test
-    void nifAlreadySet() throws NullException, EmailDoesNotExistsException, NifDoesNotExistsException, AlreadySetServiceException, AlreadySetNifException
+    void testNifAlreadySet() throws NullException, EmailDoesNotExistsException, NifDoesNotExistsException, AlreadySetServiceException, AlreadySetNifException
     {
         Party party = new Party("party");
         Nif nif = new Nif("48057957D");
