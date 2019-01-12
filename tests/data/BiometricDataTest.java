@@ -1,63 +1,53 @@
 package data;
 
-import Exceptions.BiometricVerificationFailedException;
-import org.junit.jupiter.api.BeforeEach;
+import Exceptions.NoFacialPointsException;
 import org.junit.jupiter.api.Test;
-import services.BiometricReader;
-import services.BiometricScanner;
-import services.BiometricSoftware;
+
 import java.math.BigInteger;
+import java.util.Random;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class BiometricDataTest {
-    public BiometricData bio;
-    public BiometricReader;
-    public BiometricScanner;
-    public BiometricSoftware;
-    private static class BiometricReaderDoble implements BiometricReader{
-        private BiometricData reader;
+class BiometricDataTest
+{
+    public Random r = new Random();
+    public BigInteger bigInt = new BigInteger(10, r);
 
-        @Override
-        public BiometricData readBiometricData() {
-            return reader;
+    public BiometricData b1, b2;
+    {
+        try
+        {
+            b1 = new BiometricData(bigInt, bigInt);
+            b2 = new BiometricData(bigInt, bigInt);
+
+        } catch (NoFacialPointsException e)
+        {
+            e.printStackTrace();
         }
     }
-    private static class BiometricScannerDoble implements BiometricScanner{
-        private BigInteger face;
-        private BigInteger touch;
 
-        @Override
-        public BigInteger scanFace() {
-            return face;
-        }
-        public BigInteger scanFingerprint() {
-            return touch;
-        }
-    }
-    private static class BiometricSoftwareDoble implements BiometricSoftware{
-        @Override
-        public void verifyBiometricData(BiometricData bioScan, BiometricData bioRead) throws BiometricVerificationFailedException {
-            new BiometricVerificationFailedException("Verification failed");
-        }
-    }
-    @BeforeEach
-    void init(){
-        bio = new BiometricData();
-    }
     @Test
-    void readBiometricDataTest(){
+    void testEquals()
+    {
+        assertTrue(b1.equals(b2));
+    }
 
-    }
     @Test
-    void BiometricScannerTest(){
-        BigInteger face = new BigInteger();
-        BigInteger touch = new BigInteger();
-        assertEquals(face,bio.getFacialKey());
-        assertEquals(touch,bio.getFingerPrint());
+    void testToString()
+    {
+        String facialAndPrint = "BiometricData{facial='" + bigInt + "', fingerprint='" + bigInt + "'}";
+        assertEquals(facialAndPrint, b1.toString());
     }
-    void BiometricSoftwareTest() throws BiometricVerificationFailedException(){
-        assertThrows(BiometricVerificationFailedException.class, () -> bio.)
+
+    @Test
+    void testGetFacialKey()
+    {
+        assertEquals(bigInt, b1.getFacialKey());
+    }
+
+    @Test
+    void testGetFingerPrint()
+    {
+        assertEquals(bigInt,b1.getFingerPrint());
     }
 }

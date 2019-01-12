@@ -1,8 +1,6 @@
 package kiosk;
 
-import Exceptions.BiometricReaderNotSet;
-import Exceptions.BiometricScannerNotSet;
-import Exceptions.NoFacialPointsException;
+import Exceptions.*;
 import data.BiometricData;
 import services.BiometricReader;
 import services.BiometricScanner;
@@ -64,6 +62,16 @@ public class VerifyBiometricData
         else
         {
             bDPassport = bR.readBiometricData();
+        }
+    }
+    public void verify(BiometricData bDFacial, BiometricData bDPassport) throws BiometricSoftwareNotSet, BiometricVerificationFailedException {
+        if (!bSWSet)
+        {
+            throw new BiometricSoftwareNotSet("Biometric Software not set!");
+        }
+        else
+        {
+            bSW.verifyBiometricData(bDFacial, bDPassport);
         }
     }
 }
