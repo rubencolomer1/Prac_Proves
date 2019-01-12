@@ -84,8 +84,9 @@ class VotingKioskTest
     }
 
     @Test
-    void votingKioskServicesNotSetted() throws NullException, NifDoesNotExistsException, EmailDoesNotExistsException {
-        VotingKiosk vk = new VotingKiosk();
+    void votingKioskServicesNotSetted() throws NullException, NifDoesNotExistsException, EmailDoesNotExistsException
+    {
+
         Party party = new Party("party");
         Nif nif = new Nif("48057957D");
         MailAdress mail = new MailAdress("rubencolomer.1@gmail.com");
@@ -97,10 +98,9 @@ class VotingKioskTest
     }
 
     @Test
-    void testVote() throws NullException, NullPartyException, NifDoesNotExistsException {
-        VotingKiosk vk = new VotingKiosk();
-        ElectoralOrganismDoble eOD = new ElectoralOrganismDoble();
-        MailerServiceDoble mSD = new MailerServiceDoble();
+    void testVote() throws NullException, NullPartyException, NifDoesNotExistsException
+    {
+
         Party party = new Party("party");
         Nif nif = new Nif("48057957D");
         Set<Party> validParties = new HashSet<>();
@@ -121,10 +121,9 @@ class VotingKioskTest
     }
 
     @Test
-    void testSendeReceipt() throws NullException, EmailDoesNotExistsException, NullPartyException, NifDoesNotExistsException {
-        VotingKiosk vk = new VotingKiosk();
-        ElectoralOrganismDoble eOD = new ElectoralOrganismDoble();
-        MailerServiceDoble mSD = new MailerServiceDoble();
+    void testSendeReceipt() throws NullException, EmailDoesNotExistsException, NullPartyException, NifDoesNotExistsException
+    {
+
         Party party = new Party("party");
         Nif nif = new Nif("48057957D");
         MailAdress mail = new MailAdress("rubencolomer.1@gmail.com");
