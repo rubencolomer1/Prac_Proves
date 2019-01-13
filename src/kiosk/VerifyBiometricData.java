@@ -19,6 +19,8 @@ public class VerifyBiometricData
 
     public VerifyBiometricData()
     {
+        this.bDFacial = null;
+        this.bDPassport = null;
         this.bRSet = false;
         this.bSSet = false;
         this.bSWSet = false;
