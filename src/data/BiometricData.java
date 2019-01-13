@@ -2,6 +2,7 @@ package data;
 
 import Exceptions.NoFacialPointsException;
 import java.math.BigInteger;
+import java.util.Arrays;
 
 public class BiometricData
 {
@@ -27,7 +28,7 @@ public class BiometricData
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BiometricData bio = (BiometricData) o;
-        return this.facialKey.equals(bio.facialKey) && this.fingerPrint.equals(bio.fingerPrint);
+        return Arrays.equals(bio.facialKey, this.facialKey) && Arrays.equals(bio.fingerPrint, this.fingerPrint);
     }
 
     @Override

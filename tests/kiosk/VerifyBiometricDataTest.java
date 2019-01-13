@@ -12,9 +12,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VerifyBiometricDataTest
 {
-    public BiometricScanner bS;
-    public BiometricReader bR;
-    public BiometricSoftware bSW;
+    public BiometricScannerDoble bS;
+    public BiometricReaderDoble bR;
+    public BiometricSoftwareDoble bSW;
     public VerifyBiometricData verifyBD;
 
     private static class BiometricScannerDoble implements  BiometricScanner
@@ -66,10 +66,10 @@ class VerifyBiometricDataTest
     @BeforeEach
     void init()
     {
+        verifyBD = new VerifyBiometricData();
         bS = new BiometricScannerDoble();
         bR = new BiometricReaderDoble();
         bSW = new BiometricSoftwareDoble();
-        verifyBD = new VerifyBiometricData();
     }
 
     @Test
@@ -148,6 +148,7 @@ class VerifyBiometricDataTest
         verifyBD.setBiometricReader(bR);
         verifyBD.setBiometricScanner(bS);
         verifyBD.setBiometricSoftware(bSW);
+
         assertThrows(GotNoPassportException.class, () -> verifyBD.verify(verifyBD.getBiometricFacials(), null));
     }
 
@@ -158,9 +159,19 @@ class VerifyBiometricDataTest
         verifyBD.setBiometricSoftware(bSW);
 
         verifyBD.verify(verifyBD.getBiometricFacials(), verifyBD.getBiometricPassport());
-
         assertTrue(bSW.biometricDataVerified);
-        assertEquals(bSW.bioScan, new BiometricData(new byte[] {1,2}, new byte[] {3,4}));
-        assertEquals(bSW.bioRead, new BiometricData(new byte[] {1,2}, new byte[] {3,4}));
+        assertEquals(bSW.bioScan, new BiometricData(new byte[]{1, 2}, new byte[]{3, 4}));
+        assertEquals(bSW.bioRead, new BiometricData(new byte[]{1, 2}, new byte[]{3, 4}));
     }
+
+    @Test
+    void VerifyNotEquals() throws BiometricReaderAlreadySetException, BiometricScannerAlreadySetException, BiometricSoftwareAlreadySetException
+    {
+        verifyBD.setBiometricReader(bR);
+        verifyBD.setBiometricScanner(bS);
+        verifyBD.setBiometricSoftware(bSW);
+
+        assertThrows(BiometricVerificationFailedException.class, () ->  verifyBD.verify(verifyBD.getBiometricFacials(), new BiometricData(new byte[] {1,2}, new byte[] {5,6})));
+    }
+
 }

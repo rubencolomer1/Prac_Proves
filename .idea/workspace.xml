@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5e2f1a72-4a26-4fd9-a06a-a5a389592fef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kiosk/VerifyBiometricData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk/VerifyBiometricData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Prac_Proves/kiosk/VerifyBiometricDataTest$BiometricSoftwareDoble.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Prac_Proves/kiosk/VerifyBiometricDataTest$BiometricSoftwareDoble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Prac_Proves/kiosk/VerifyBiometricDataTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Prac_Proves/kiosk/VerifyBiometricDataTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Prac_Proves/kiosk/VotingKioskTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Prac_Proves/kiosk/VotingKioskTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/BiometricData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/BiometricData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/kiosk/VerifyBiometricDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/kiosk/VerifyBiometricDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,14 +22,36 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/kiosk/VerifyBiometricDataTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1908">
-              <caret line="157" column="41" selection-start-line="157" selection-start-column="38" selection-end-line="157" selection-end-column="41" />
+            <state relative-caret-position="-132">
+              <caret line="150" column="8" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#606#607#0" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#757#758#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
+                <element signature="e#653#654#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/BiometricData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -34,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kiosk/VerifyBiometricData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-969">
-              <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+            <state relative-caret-position="340">
+              <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,7 +106,6 @@
         <option value="$PROJECT_DIR$/src/Exceptions/hasNotVotesYet.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/HasNotVotesYet.java" />
         <option value="$PROJECT_DIR$/src/kiosk/VotingKiosk.java" />
-        <option value="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" />
         <option value="$PROJECT_DIR$/src/kiosk/ValidateBiometricData.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/BioemtricSoftwareNotSet.java" />
         <option value="$PROJECT_DIR$/tests/data/NifTest.java" />
@@ -95,17 +120,18 @@
         <option value="$PROJECT_DIR$/src/Exceptions/GotNoFacialException.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/GotNoPassportException.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/BiometricVerificationFailedException.java" />
-        <option value="$PROJECT_DIR$/src/data/BiometricData.java" />
         <option value="$PROJECT_DIR$/src/services/BiometricScanner.java" />
         <option value="$PROJECT_DIR$/tests/data/BiometricDataTest.java" />
         <option value="$PROJECT_DIR$/src/kiosk/VerifyBiometricData.java" />
+        <option value="$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java" />
+        <option value="$PROJECT_DIR$/src/data/BiometricData.java" />
         <option value="$PROJECT_DIR$/tests/kiosk/VerifyBiometricDataTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-94" />
-    <option name="y" value="171" />
+    <option name="x" value="-95" />
+    <option name="y" value="170" />
     <option name="width" value="1750" />
     <option name="height" value="980" />
   </component>
@@ -115,6 +141,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -217,11 +244,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547342797514" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547380277649" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="project.structure.last.edited" value="Project" />
@@ -253,21 +279,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VerifyBiometricDataTest.testGotNoPassportException">
-    <configuration name="BiometricDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Prac_Proves" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="data.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="data" />
-      <option name="MAIN_CLASS_NAME" value="data.BiometricDataTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.VerifyBiometricDataTest">
     <configuration name="VerifyBiometricDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Prac_Proves" />
       <extension name="coverage">
@@ -278,6 +290,38 @@
       </extension>
       <option name="PACKAGE_NAME" value="kiosk" />
       <option name="MAIN_CLASS_NAME" value="kiosk.VerifyBiometricDataTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VerifyBiometricDataTest.VerifyNotEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Prac_Proves" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kiosk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kiosk" />
+      <option name="MAIN_CLASS_NAME" value="kiosk.VerifyBiometricDataTest" />
+      <option name="METHOD_NAME" value="VerifyNotEquals" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VerifyBiometricDataTest.testGetBiometricFacials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Prac_Proves" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kiosk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kiosk" />
+      <option name="MAIN_CLASS_NAME" value="kiosk.VerifyBiometricDataTest" />
+      <option name="METHOD_NAME" value="testGetBiometricFacials" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -293,22 +337,6 @@
       <option name="PACKAGE_NAME" value="kiosk" />
       <option name="MAIN_CLASS_NAME" value="kiosk.VerifyBiometricDataTest" />
       <option name="METHOD_NAME" value="testGetBiometricPassport" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VerifyBiometricDataTest.testGotNoFacialException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Prac_Proves" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kiosk.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kiosk" />
-      <option name="MAIN_CLASS_NAME" value="kiosk.VerifyBiometricDataTest" />
-      <option name="METHOD_NAME" value="testGotNoFacialException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -332,11 +360,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VerifyBiometricDataTest.testGotNoPassportException" />
-        <item itemvalue="JUnit.VerifyBiometricDataTest.testGotNoFacialException" />
-        <item itemvalue="JUnit.VerifyBiometricDataTest.testGetBiometricPassport" />
         <item itemvalue="JUnit.VerifyBiometricDataTest" />
-        <item itemvalue="JUnit.BiometricDataTest" />
+        <item itemvalue="JUnit.VerifyBiometricDataTest.VerifyNotEquals" />
+        <item itemvalue="JUnit.VerifyBiometricDataTest.testGetBiometricFacials" />
+        <item itemvalue="JUnit.VerifyBiometricDataTest.testGetBiometricPassport" />
+        <item itemvalue="JUnit.VerifyBiometricDataTest.testGotNoPassportException" />
       </list>
     </recent_temporary>
   </component>
@@ -453,35 +481,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BiometricDataTest - 2019.01.12 at 23h 35m 38s.xml">
-      <configuration name="BiometricDataTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VerifyBiometricDataTest - 2019.01.13 at 01h 28m 19s.xml">
-      <configuration name="VerifyBiometricDataTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BiometricDataTest - 2019.01.13 at 01h 47m 13s.xml">
-      <configuration name="BiometricDataTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BiometricDataTest - 2019.01.13 at 01h 48m 41s.xml">
-      <configuration name="BiometricDataTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BiometricDataTest - 2019.01.13 at 01h 51m 57s.xml">
-      <configuration name="BiometricDataTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VerifyBiometricDataTest - 2019.01.13 at 01h 52m 13s.xml">
-      <configuration name="VerifyBiometricDataTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VerifyBiometricDataTest - 2019.01.13 at 01h 59m 33s.xml">
-      <configuration name="VerifyBiometricDataTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VerifyBiometricDataTest_testGetBiometricPassport - 2019.01.13 at 02h 02m 42s.xml">
-      <configuration name="VerifyBiometricDataTest.testGetBiometricPassport" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VerifyBiometricDataTest_testGotNoFacialException - 2019.01.13 at 02h 12m 40s.xml">
       <configuration name="VerifyBiometricDataTest.testGotNoFacialException" configurationId="JUnit" />
     </history-entry>
     <history-entry file="VerifyBiometricDataTest_testGotNoPassportException - 2019.01.13 at 02h 15m 02s.xml">
       <configuration name="VerifyBiometricDataTest.testGotNoPassportException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VerifyBiometricDataTest_testGetBiometricFacials - 2019.01.13 at 02h 32m 54s.xml">
+      <configuration name="VerifyBiometricDataTest.testGetBiometricFacials" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VerifyBiometricDataTest_testGetBiometricPassport - 2019.01.13 at 02h 33m 10s.xml">
+      <configuration name="VerifyBiometricDataTest.testGetBiometricPassport" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VerifyBiometricDataTest_testGetBiometricPassport - 2019.01.13 at 03h 00m 20s.xml">
+      <configuration name="VerifyBiometricDataTest.testGetBiometricPassport" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VerifyBiometricDataTest_testGetBiometricFacials - 2019.01.13 at 12h 22m 41s.xml">
+      <configuration name="VerifyBiometricDataTest.testGetBiometricFacials" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VerifyBiometricDataTest_testGetBiometricFacials - 2019.01.13 at 12h 24m 49s.xml">
+      <configuration name="VerifyBiometricDataTest.testGetBiometricFacials" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VerifyBiometricDataTest - 2019.01.13 at 12h 43m 40s.xml">
+      <configuration name="VerifyBiometricDataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VerifyBiometricDataTest_VerifyNotEquals - 2019.01.13 at 12h 49m 46s.xml">
+      <configuration name="VerifyBiometricDataTest.VerifyNotEquals" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VerifyBiometricDataTest_VerifyNotEquals - 2019.01.13 at 12h 50m 38s.xml">
+      <configuration name="VerifyBiometricDataTest.VerifyNotEquals" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -502,7 +530,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.29127517" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.29932886" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -510,7 +538,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -712,9 +740,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kiosk/ValidateBiometricData.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kiosk/ValidateBiometricData.java" />
     <entry file="file://$PROJECT_DIR$/src/data/Party.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -785,17 +811,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Exceptions/PassportNotSetException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#134#135#0" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exceptions/PassportNotSetException.java" />
     <entry file="file://$PROJECT_DIR$/src/Exceptions/BiometricSoftwareAlreadySetException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -908,20 +924,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/BiometricData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/data/DigitalSignatureTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="38" />
+        <state relative-caret-position="119">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -930,8 +936,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kiosk/VerifyBiometricData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
-          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        <state relative-caret-position="340">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/BiometricData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -940,8 +956,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kiosk/VotingKiosk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="85">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -950,8 +966,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/kiosk/VotingKioskTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="165" column="22" selection-start-line="165" selection-start-column="19" selection-end-line="165" selection-end-column="22" />
+        <state relative-caret-position="91">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -960,14 +976,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/kiosk/VerifyBiometricDataTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1908">
-          <caret line="157" column="41" selection-start-line="157" selection-start-column="38" selection-end-line="157" selection-end-column="41" />
+        <state relative-caret-position="-132">
+          <caret line="150" column="8" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#757#758#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
           </folding>
         </state>
       </provider>

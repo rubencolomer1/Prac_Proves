@@ -162,7 +162,6 @@ class VotingKioskTest
 
         vk.vote(party);
         vk.sendeReceipt(mail);
-
         assertTrue(mSD.emailSended);
 
     }
