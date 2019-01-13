@@ -1,29 +1,24 @@
 package data;
 
 import Exceptions.NoFacialPointsException;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.math.BigInteger;
-import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BiometricDataTest
 {
-    public Random r = new Random();
-    public BigInteger bigInt = new BigInteger(10, r);
-
     public BiometricData b1, b2;
-    {
-        try
-        {
-            b1 = new BiometricData(bigInt, bigInt);
-            b2 = new BiometricData(bigInt, bigInt);
+    public byte[] byte1, byte2;
 
-        } catch (NoFacialPointsException e)
-        {
-            e.printStackTrace();
-        }
+    @BeforeEach
+    void init() throws NoFacialPointsException {
+        byte1 = new byte[] {1,2};
+        byte2 = new byte[] {3,4};
+        b1 = new BiometricData(byte1, byte2);
+        b2 = new BiometricData(byte1, byte2);
     }
 
     @Test
@@ -35,19 +30,19 @@ class BiometricDataTest
     @Test
     void testToString()
     {
-        String facialAndPrint = "BiometricData{facial='" + bigInt + "', fingerprint='" + bigInt + "'}";
+        String facialAndPrint = "BiometricData{facial='" + byte1 + "', fingerprint='" + byte2 + "'}";
         assertEquals(facialAndPrint, b1.toString());
     }
 
     @Test
     void testGetFacialKey()
     {
-        assertEquals(bigInt, b1.getFacialKey());
+        assertEquals(byte1, b1.getFacialKey());
     }
 
     @Test
     void testGetFingerPrint()
     {
-        assertEquals(bigInt,b1.getFingerPrint());
+        assertEquals(byte2,b1.getFingerPrint());
     }
 }

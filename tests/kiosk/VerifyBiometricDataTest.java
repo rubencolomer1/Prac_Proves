@@ -1,66 +1,137 @@
 package kiosk;
 
-import Exceptions.BiometricVerificationFailedException;
+import Exceptions.*;
 import data.BiometricData;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import services.BiometricReader;
 import services.BiometricScanner;
 import services.BiometricSoftware;
 
-import java.math.BigInteger;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class VerifyBiometricDataTest
 {
-    private static class BiometricReaderDoble implements BiometricReader {
-        private BiometricData reader;
+    public BiometricScanner bS;
+    public BiometricReader bR;
+    public BiometricSoftware bSW;
+    public VerifyBiometricData verifyBD;
+
+    private static class BiometricScannerDoble implements  BiometricScanner
+    {
+        @Override
+        public byte[] scanFace()
+        {
+            return new byte[] {1,2};
+        }
 
         @Override
-        public BiometricData readBiometricData() {
-            return reader;
+        public byte[] scanFingerprint()
+        {
+            return new byte[] {3,4};
         }
     }
-    private static class BiometricScannerDoble implements BiometricScanner {
-        private BigInteger face;
-        private BigInteger touch;
+
+    private static class BiometricReaderDoble implements BiometricReader
+    {
+        @Override
+        public BiometricData readBiometricData() throws NoFacialPointsException
+        {
+            return new BiometricData(new byte[] {1,2}, new byte[] {3,4});
+        }
+    }
+
+    private static class BiometricSoftwareDoble implements BiometricSoftware
+    {
+        public boolean BiometricDataVerified = false;
+        public BiometricData bioScan;
+        public BiometricData bioRead;
 
         @Override
-        public BigInteger scanFace() {
-            return face;
+        public void verifyBiometricData(BiometricData bioScan, BiometricData bioRead) throws BiometricVerificationFailedException
+        {
+            if (bioScan.equals(bioRead))
+            {
+                BiometricDataVerified = true;
+                this.bioScan = bioScan;
+                this.bioRead = bioRead;
+            }
+            else
+            {
+                throw new BiometricVerificationFailedException("Ha fallat la verificació!");
+            }
         }
-        public BigInteger scanFingerprint() {
-            return touch;
-        }
     }
-    private static class BiometricSoftwareDoble implements BiometricSoftware {
-        @Override
-        public void verifyBiometricData(BiometricData bioScan, BiometricData bioRead) throws BiometricVerificationFailedException {
-            new BiometricVerificationFailedException("Verification failed");
-        }
+
+    @BeforeEach
+    void init()
+    {
+        bS = new BiometricScannerDoble();
+        bR = new BiometricReaderDoble();
+        bSW = new BiometricSoftwareDoble();
+        verifyBD = new VerifyBiometricData();
     }
 
     @Test
-    void setBiometricScanner() {
+    void testBiometricScannerAlreadySet() throws BiometricReaderAlreadySetException
+    {
+        verifyBD.setBiometricReader(bR);
+        assertThrows(BiometricReaderAlreadySetException.class, () -> verifyBD.setBiometricReader(bR));
     }
 
     @Test
-    void setBiometricReader() {
+    void testBiometricReaderAlreadySet() throws BiometricScannerAlreadySetException
+    {
+        verifyBD.setBiometricScanner(bS);
+        assertThrows(BiometricScannerAlreadySetException.class, () -> verifyBD.setBiometricScanner(bS));
     }
 
     @Test
-    void setBiometricSoftware() {
+    void testBiometricSoftwareAlreadySet() throws BiometricSoftwareAlreadySetException
+    {
+        verifyBD.setBiometricSoftware(bSW);
+        assertThrows(BiometricSoftwareAlreadySetException.class, () -> verifyBD.setBiometricSoftware(bSW));
     }
 
     @Test
-    void getBiometricFacials() {
+    void testBiometricScannerNotSet() throws BiometricScannerNotSetException, NoFacialPointsException
+    {
+        assertThrows(BiometricScannerNotSetException.class, () -> verifyBD.getBiometricFacials());
     }
 
     @Test
-    void getBiometricPassport() {
+    void testBiometricReaderNotSet()
+    {
+        assertThrows(BiometricReaderNotSetException.class, () -> verifyBD.getBiometricPassport());
     }
 
     @Test
-    void verify() {
+    void testBiometricSoftwareNotSet() throws BiometricScannerAlreadySetException, BiometricReaderAlreadySetException, BiometricScannerNotSetException, NoFacialPointsException, BiometricReaderNotSetException
+    {
+        verifyBD.setBiometricScanner(bS);
+        verifyBD.setBiometricReader(bR);
+
+        assertThrows(BiometricSoftwareNotSetException.class, () -> verifyBD.verify(verifyBD.getBiometricFacials(),verifyBD.getBiometricPassport()));
+    }
+
+    @Test
+    void testGetBiometricFacials() throws BiometricScannerAlreadySetException, BiometricScannerNotSetException, NoFacialPointsException
+    {
+        verifyBD.setBiometricScanner(bS);
+        BiometricData BA = verifyBD.getBiometricFacials();
+
+        assertEquals(BA, new BiometricData(new byte[] {1,2}, new byte[] {3,4}));
+    }
+
+    @Test
+    void testGetBiometricPassport()
+    {
+
+    }
+
+    @Test
+    void testVerify()
+    {
+
     }
 }

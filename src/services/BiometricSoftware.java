@@ -1,8 +1,8 @@
 package services;
 
-import data.BiometricData;
 import Exceptions.BiometricVerificationFailedException;
+import data.BiometricData;
 
 public interface BiometricSoftware {
-    void verifyBiometricData(BiometricData bioScan, BiometricData bioRead) throws BiometricVerificationFailedException;
+    void verifyBiometricData(BiometricData bioScan, BiometricData bioRead) throws BiometricVerificationFailedException, BiometricVerificationFailedException;
 }

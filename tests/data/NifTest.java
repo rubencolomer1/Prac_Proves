@@ -46,7 +46,7 @@ class NifTest {
     }
 
     @Test
-    void testIsValidEmailAddress()
+    void testIsValidNif()
     {
         assertTrue(nifCorrect1.isValidNif(nifCorrect1.getNif()));
         assertTrue(nifCorrect2.isValidNif(nifCorrect2.getNif()));

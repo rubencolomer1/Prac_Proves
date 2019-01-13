@@ -6,10 +6,10 @@ import java.math.BigInteger;
 public class BiometricData
 {
     //facial points
-    private BigInteger facialKey;
-    private BigInteger fingerPrint;
+    private byte[] facialKey;
+    private byte[] fingerPrint;
 
-    public BiometricData(BigInteger facialKey, BigInteger fingerPrint) throws NoFacialPointsException
+    public BiometricData(byte[] facialKey, byte[] fingerPrint) throws NoFacialPointsException
     {
         if (facialKey == null || fingerPrint == null)
         {
@@ -35,12 +35,12 @@ public class BiometricData
         return "BiometricData{" + "facial='" + this.facialKey + '\'' + ", fingerprint='" + this.fingerPrint + '\'' +'}';
     }
 
-    public BigInteger getFacialKey()
+    public byte[] getFacialKey()
     {
         return facialKey;
     }
 
-    public BigInteger getFingerPrint()
+    public byte[] getFingerPrint()
     {
         return fingerPrint;
     }

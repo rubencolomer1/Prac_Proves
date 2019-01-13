@@ -24,51 +24,82 @@ public class VerifyBiometricData
         this.bSWSet = false;
     }
 
-    public void setBiometricScanner(BiometricScanner bS)
-    {
-        this.bS = bS;
-        this.bSSet = true;
+    public void setBiometricScanner(BiometricScanner bS) throws BiometricScannerAlreadySetException {
+        if (bSSet)
+        {
+            throw new BiometricScannerAlreadySetException("Biometric Scanner already set!");
+        }
+        else
+        {
+            this.bS = bS;
+            this.bSSet = true;
+        }
     }
 
-    public void setBiometricReader(BiometricReader bR)
-    {
-        this.bR = bR;
-        this.bRSet = true;
+    public void setBiometricReader(BiometricReader bR) throws BiometricReaderAlreadySetException {
+        if (bRSet)
+        {
+            throw new BiometricReaderAlreadySetException("Biometric Reader already set!");
+        }
+        else
+        {
+            this.bR = bR;
+            this.bRSet = true;
+        }
     }
 
-    public void setBiometricSoftware(BiometricSoftware bSW)
-    {
-        this.bSW = bSW;
-        this.bSWSet = true;
+    public void setBiometricSoftware(BiometricSoftware bSW) throws BiometricSoftwareAlreadySetException {
+        if (bSWSet)
+        {
+            throw new BiometricSoftwareAlreadySetException("Biometric Software already set!");
+        }
+        else
+        {
+            this.bSW = bSW;
+            this.bSWSet = true;
+        }
     }
 
-    public void getBiometricFacials() throws BiometricScannerNotSet, NoFacialPointsException
+    public BiometricData getBiometricFacials() throws BiometricScannerNotSetException, NoFacialPointsException
     {
         if (!bSSet)
         {
-            throw new BiometricScannerNotSet("Biometric Scanner not set!");
+            throw new BiometricScannerNotSetException("Biometric Scanner not set!");
         }
         else
         {
             bDFacial = new BiometricData(bS.scanFace(), bS.scanFingerprint());
+            return bDFacial;
         }
     }
 
-    public void getBiometricPassport() throws BiometricReaderNotSet {
+    public BiometricData getBiometricPassport() throws BiometricReaderNotSetException, NoFacialPointsException {
         if (!bRSet)
         {
-            throw new BiometricReaderNotSet("Biometric Reader not set!");
+            throw new BiometricReaderNotSetException("Biometric Reader not set!");
         }
         else
         {
             bDPassport = bR.readBiometricData();
+            return bDPassport;
         }
     }
-    public void verify(BiometricData bDFacial, BiometricData bDPassport) throws BiometricSoftwareNotSet, BiometricVerificationFailedException {
+    public void verify(BiometricData bDFacial, BiometricData bDPassport) throws BiometricSoftwareNotSetException, GotNoFacialException, GotNoPassportException, BiometricVerificationFailedException {
         if (!bSWSet)
         {
-            throw new BiometricSoftwareNotSet("Biometric Software not set!");
+            throw new BiometricSoftwareNotSetException("Biometric Software not set!");
         }
+
+        else if (bDFacial == null)
+        {
+            throw new GotNoFacialException("Got no FaceKey and FingerPrint!");
+        }
+
+        else if (bDPassport == null)
+        {
+            throw new GotNoPassportException("Got no Biometric Data of Passport!");
+        }
+
         else
         {
             bSW.verifyBiometricData(bDFacial, bDPassport);
