@@ -72,7 +72,7 @@ class VotingKioskTest
     }
 
     @Test
-    void testVotingKioskServicesAlreadySetted() throws AlreadySetServiceException {
+    void testVotingKioskServicesAlreadySet() throws AlreadySetServiceException {
         vk.setElectoralOrganism(eOD);
         vk.setMailerService(mSD);
         assertThrows(AlreadySetServiceException.class, () -> vk.setMailerService(mSD));
