@@ -88,7 +88,7 @@ public  class VotingKiosk
         }
     }
 
-    public void sendeReceipt(MailAdress address) throws NullException, ServicesNotSetException, HasNotVotesYetException {
+    public void sendeReceipt(MailAdress address) throws NullException, ServicesNotSetException, HasNotVotedYetException {
 
 
         if (!eOServiceSet || !mServiceSet)
@@ -97,7 +97,7 @@ public  class VotingKiosk
         }
         else if(eO.canVote(nif))
         {
-            throw new HasNotVotesYetException("Encara no ha votat");
+            throw new HasNotVotedYetException("Encara no ha votat");
         }
         else
         {

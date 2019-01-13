@@ -142,7 +142,7 @@ class VotingKioskTest
     }
 
     @Test
-    void testSendeReceipt() throws NullException, EmailDoesNotExistsException, NullPartyException, NifDoesNotExistsException, ServicesNotSetException, NifCannotVoteException, NifNotSetException, HasNotVotesYetException, AlreadySetServiceException, AlreadySetNifException
+    void testSendeReceipt() throws NullException, EmailDoesNotExistsException, NullPartyException, NifDoesNotExistsException, ServicesNotSetException, NifCannotVoteException, NifNotSetException, HasNotVotedYetException, AlreadySetServiceException, AlreadySetNifException
     {
 
         Party party = new Party("party");
@@ -158,7 +158,7 @@ class VotingKioskTest
 
         //Encara no s'ha votat
 
-        assertThrows(HasNotVotesYetException.class, () -> vk.sendeReceipt(mail));
+        assertThrows(HasNotVotedYetException.class, () -> vk.sendeReceipt(mail));
 
         vk.vote(party);
         vk.sendeReceipt(mail);
