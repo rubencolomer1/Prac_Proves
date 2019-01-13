@@ -153,7 +153,7 @@ class VerifyBiometricDataTest
     }
 
     @Test
-    void testVerify() throws BiometricReaderAlreadySetException, BiometricScannerAlreadySetException, BiometricSoftwareAlreadySetException, BiometricScannerNotSetException, NoFacialPointsException, BiometricReaderNotSetException, BiometricVerificationFailedException, GotNoPassportException, GotNoFacialException, BiometricSoftwareNotSetException {
+    void testVerifyEquals() throws BiometricReaderAlreadySetException, BiometricScannerAlreadySetException, BiometricSoftwareAlreadySetException, BiometricScannerNotSetException, NoFacialPointsException, BiometricReaderNotSetException, BiometricVerificationFailedException, GotNoPassportException, GotNoFacialException, BiometricSoftwareNotSetException {
         verifyBD.setBiometricReader(bR);
         verifyBD.setBiometricScanner(bS);
         verifyBD.setBiometricSoftware(bSW);
